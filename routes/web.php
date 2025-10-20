@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
  * FRONTEND ROUTES
  */
 Route::get('/', [BlogController::class, 'welcome'])->name('index');
-Route::get('/posts', [BlogController::class, 'index'])->name('home');
+Route::get('/posts', [BlogController::class, 'index'])->name('posts');
 Route::get('/post/{slug}', [BlogController::class, 'readPost'])->name('read_post');
 Route::get('/posts/category/{slug}', [BlogController::class, 'categoryPosts'])->name('category_posts');
 Route::get('/posts/author/{username}', [BlogController::class, 'authorPosts'])->name('author_posts');

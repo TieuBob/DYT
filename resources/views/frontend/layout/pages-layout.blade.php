@@ -2,14 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Title -->
-    <title>@yield('title')</title>
-
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    @yield('meta_tags')
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/site/{{ isset(settings()->site_favicon) ? settings()->site_favicon : '' }}">
 
@@ -382,8 +378,8 @@
                                             data-animation-in="slideInUp" data-animation-out="fadeOut">
                                             <a id="blogMegaMenu"
                                                 class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                                href="{{ route('home') }}" aria-haspopup="true" aria-expanded="false"
-                                                aria-labelledby="blogSubMenu">Blog</a>
+                                                href="{{ route('posts') }}" aria-haspopup="true"
+                                                aria-expanded="false" aria-labelledby="blogSubMenu">Blog</a>
                                         </li>
                                         <li class="nav-item u-header__nav-item">
                                             <a class="nav-link u-header__nav-link" href="">About us</a>

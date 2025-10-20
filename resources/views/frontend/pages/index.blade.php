@@ -1,5 +1,8 @@
 @extends('frontend.layout.pages-layout')
 @section('title', isset($title) ? $title : 'Page title here')
+@section('meta_tags')
+    {!! SEO::generate() !!}
+@endsection
 @section('content')
     <main id="content" role="main">
         <!-- breadcrumb -->
@@ -9,7 +12,7 @@
                 <div class="my-md-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-3 flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble">
-                            <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../home/index.html">Home</a>
+                            <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="/">Home</a>
                             </li>
                             <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1 active" aria-current="page">Blog</li>
                         </ol>
@@ -454,7 +457,7 @@
                         <article class="mb-4">
                             <div class="media">
                                 <div class="width-75 height-75 mr-3 position-relative">
-                                    <img class="img-fluid object-fit-cover" src="https://placehold.it/150x150/DDD/DDD/"
+                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img5.jpg"
                                         alt="Image Description">
                                     <i class="fa fa-paragraph position-absolute-center text-white"></i>
                                 </div>
