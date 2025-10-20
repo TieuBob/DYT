@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Post;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
@@ -42,6 +44,6 @@ class BlogController extends Controller
             'title' => 'DYT - Blog',
         ];
 
-        return view('frontend.pages.index', $data);
+        return view('frontend.pages.blog', $data);
     }
 }

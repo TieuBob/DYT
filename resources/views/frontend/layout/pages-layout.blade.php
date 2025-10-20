@@ -15,6 +15,7 @@
         rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" type="text/css" href="/backend/vendors/styles/icon-font.min.css" />
     <link rel="stylesheet" href="/frontend/assets/vendor/font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/frontend/assets/css/font-electro.css">
 

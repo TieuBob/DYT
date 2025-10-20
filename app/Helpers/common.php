@@ -3,6 +3,9 @@
 use App\Models\Category;
 use App\Models\GeneralSetting;
 use App\Models\ParentCategory;
+use App\Models\Post;
+use Carbon\Carbon;
+use illuminate\Support\Str;
 
 /**
  * Site information
@@ -44,7 +47,7 @@ if (!function_exists('navigations')) {
                 ';
                 foreach ($item->children as $category) {
                     if ($category->posts->count() > 0) {
-                        $navigations_html .= ' <li><a href="#!" class="nav-link u-header__sub-menu-nav-link"> ' . $category->name . '</a></li> ';
+                        $navigations_html .= ' <li><a href="' . route('category_posts', $category->slug) . '" class="nav-link u-header__sub-menu-nav-link"> ' . $category->name . '</a></li> ';
                     }
                 }
                 $navigations_html .= '
@@ -59,7 +62,7 @@ if (!function_exists('navigations')) {
                     <div class="col-md-3">
                         <span class="u-header__sub-menu-title">Shop Pages</span>
                         <ul class="u-header__sub-menu-nav-group mb-3">
-                            <li><a href="#!" class="nav-link u-header__sub-menu-nav-link">' . $item->name . '</a></li>
+                            <li><a href="' . route('category_posts', $item->slug) . '" class="nav-link u-header__sub-menu-nav-link">' . $item->name . '</a></li>
                         </ul>
                     </div>
                 ';
@@ -69,65 +72,87 @@ if (!function_exists('navigations')) {
     }
 }
 
-// dynamic navigation menus
-// if (!function_exists('navigations')) {
-//     function navigations()
-//     {
-//         $navigations_html = '';
-//         $pcategories = ParentCategory::whereHas('children', function ($q) {
-//             $q->whereHas('posts');
-//         })->orderBy('name', 'asc')->get();
+/** 
+ * DATE FORMAT eg: October 20, 2025
+ */
+if (!function_exists('date_formatter')) {
+    function date_formatter($value)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $value)->isoFormat('LL');
+    }
+}
 
-//         $categories = Category::whereHas('posts')
-//             ->where('parent', 0)
-//             ->orderBy('name', 'asc')
-//             ->get();
+/**
+ * STRIP WORDS
+ */
+if (!function_exists('words')) {
+    function words($value, $words = 15, $end = "...")
+    {
+        return Str::words(strip_tags($value), $words, $end);
+    }
+}
 
-//         // group each 2 parent category in each col-md-3
-//         $chunks = $pcategories->chunk(2);
+/**
+ * CALCULATE POST READING DURATION
+ */
+if (!function_exists('readDuration')) {
+    function readDuration(...$text)
+    {
+        Str::macro('timeCounter', function ($text) {
+            $totalWords = str_word_count(implode(" ", $text));
+            $minutesToRead = round($totalWords / 200);
+            return (int)max(1, $minutesToRead);
+        });
+        return Str::timeCounter($text);
+    }
+}
 
-//         foreach ($chunks as $group) {
-//             $navigations_html .= '<div class="col-md-3">';
+/**
+ * DISPLAY LATES POST ON HOMEPAGE
+ */
+if (!function_exists('latest_posts')) {
+    function latest_posts($skip = 0, $limit = 5)
+    {
+        return Post::skip($skip)
+            ->limit($limit)
+            ->where('visibility', 1)
+            ->orderBy('created_at', 'desc')
+            ->get();
+    }
+}
 
-//             foreach ($group as $parent) {
-//                 $navigations_html .= '
-//                     <span class="u-header__sub-menu-title">' . e($parent->name) . '</span>
-//                     <ul class="u-header__sub-menu-nav-group mb-3">
-//                 ';
+/**
+ * LISTING CATEGORIES WITH NUMBER OF POSTS ON SIDEBAR
+ */
+if (!function_exists('sidebar_categories')) {
+    function sidebar_categories($limit = 8)
+    {
+        return Category::withCount('posts')
+            ->having('posts_count', '>', 0)
+            ->limit($limit)
+            ->orderBy('posts_count', 'desc')
+            ->get();
+    }
+}
 
-//                 foreach ($parent->children as $child) {
-//                     if ($child->posts->count() > 0) {
-//                         $navigations_html .= '
-//                             <li>
-//                                 <a href="#!" class="nav-link u-header__sub-menu-nav-link">'
-//                             . e($child->name) .
-//                             '</a>
-//                             </li>
-//                         ';
-//                     }
-//                 }
+/**
+ * FETCH ALL TAGS FROM THE 'posts' TABLE
+ */
+if (!function_exists('getTags')) {
+    function getTags($limit = null)
+    {
+        $tags = Post::where('tags', '!=', '')->pluck('tags');
+        //Split the tags into an array and remove duplicate
+        $uniqueTags = $tags->flatMap(function ($tagsString) {
+            return explode(',', $tagsString);
+        })->map(fn($tag) => trim($tag)) //Trim any extra whitespace
+            ->unique()
+            ->sort()
+            ->values();
 
-//                 $navigations_html .= '</ul>';
-//             }
-
-//             $navigations_html .= '</div>';
-//         }
-
-//         // add category empty parent (parent = 0)
-//         if ($categories->count() > 0) {
-//             $navigations_html .= '<div class="col-md-3">';
-//             $navigations_html .= '<span class="u-header__sub-menu-title">Other Categories</span>';
-//             $navigations_html .= '<ul class="u-header__sub-menu-nav-group mb-3">';
-//             foreach ($categories as $cat) {
-//                 $navigations_html .= '
-//                     <li>
-//                         <a href="#!" class="nav-link u-header__sub-menu-nav-link">' . e($cat->name) . '</a>
-//                     </li>
-//                 ';
-//             }
-//             $navigations_html .= '</ul></div>';
-//         }
-
-//         return $navigations_html;
-//     }
-// }
+        if ($limit) {
+            $uniqueTags = $uniqueTags->take($limit);
+        }
+        return $uniqueTags->all();
+    }
+}
