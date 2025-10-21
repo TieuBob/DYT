@@ -95,7 +95,7 @@
                                 </article>
                             @endforeach
                         @else
-                            <p><span class="text-danger">No posts found in this category</span></p>
+                            <p><span class="text-danger">No posts found in this tag</span></p>
                         @endif
 
                     </div>

@@ -156,3 +156,7 @@ if (!function_exists('getTags')) {
         return $uniqueTags->all();
     }
 }
+
+/**
+ * LISTING SIDEBAR RECENT POSTS
+ */

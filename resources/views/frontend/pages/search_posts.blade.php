@@ -16,7 +16,7 @@
                             <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a
                                     href="{{ route('posts') }}">Blog</a></li>
                             <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1 active" aria-current="page">
-                                {{ $title }}</li>
+                                Search for: {{ $query }}</li>
                         </ol>
                     </nav>
                 </div>
@@ -95,7 +95,7 @@
                                 </article>
                             @endforeach
                         @else
-                            <p><span class="text-danger">No posts found in this category</span></p>
+                            <p><span class="text-danger">No posts found in this search</span></p>
                         @endif
 
                     </div>

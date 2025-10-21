@@ -147,20 +147,9 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-wd">
-                    <aside class="mb-7">
-                        <form class="">
-                            <div class="d-flex align-items-center">
-                                <label class="sr-only" for="signupSrEmail">Search Electro blog</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control px-4" name="search" id="signupSrEmail"
-                                        placeholder="Search..." aria-label="Search Electro blog">
-                                </div>
-                                <button type="submit" class="btn btn-primary text-nowrap ml-3 d-none">
-                                    <span class="fas fa-search font-size-1 mr-2"></span> Search
-                                </button>
-                            </div>
-                        </form>
-                    </aside>
+                    <!-- sidebar serach blog -->
+                    <x-sidebar-search-blog></x-sidebar-search-blog>
+                    <!-- about blog -->
                     <aside class="mb-7">
                         <div class="border-bottom border-color-1 mb-5">
                             <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">About Blog</h3>
