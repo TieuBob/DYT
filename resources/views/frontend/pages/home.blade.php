@@ -67,8 +67,8 @@
                                 </div>
                                 <div class="col-xl-5 col-6 flex-horizontal-center ml-auto ml-md-0"
                                     data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
-                                    <img class="img-fluid ml-auto mr-5 h-100"
-                                        src="/frontend/assets/img/416X420/img1.png" alt="Image Description">
+                                    <img class="img-fluid ml-auto mr-5 h-100" src="/frontend/assets/img/416X420/img1.png"
+                                        alt="Image Description">
                                 </div>
                             </div>
                         </div>
@@ -97,8 +97,8 @@
                                 </div>
                                 <div class="col-xl-5 col-6 flex-horizontal-center ml-auto ml-md-0"
                                     data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
-                                    <img class="img-fluid ml-auto mr-5 h-100"
-                                        src="/frontend/assets/img/416X420/img3.png" alt="Image Description">
+                                    <img class="img-fluid ml-auto mr-5 h-100" src="/frontend/assets/img/416X420/img3.png"
+                                        alt="Image Description">
                                 </div>
                             </div>
                         </div>
@@ -114,8 +114,7 @@
                         <!-- Image Banner -->
                         <aside class="mb-8">
                             <a href="../shop/shop.html" class="d-block">
-                                <img class="img-fluid" src="/frontend/assets/img/270X428/img1.jpg"
-                                    alt="Image Description">
+                                <img class="img-fluid" src="/frontend/assets/img/270X428/img1.jpg" alt="Image Description">
                             </a>
                         </aside>
                         <!-- End Image Banner -->
@@ -901,8 +900,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -930,8 +928,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -959,8 +956,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -988,8 +984,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1017,8 +1012,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1046,8 +1040,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1075,8 +1068,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1104,8 +1096,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1133,8 +1124,7 @@
                                     <div class="js-slide products-group">
                                         <div class="product-item remove-divider text-center">
                                             <div class="product-item__outer h-100">
-                                                <div
-                                                    class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
+                                                <div class="product-item__inner remove-prodcut-hover px-wd-4 p-2 p-md-3">
                                                     <div class="product-item__body pb-xl-2">
                                                         <div class="mb-2">
                                                             <a href="../shop/single-product-fullwidth.html"
@@ -1192,8 +1182,8 @@
                                                         class="font-weight-bold text-dark">Robot Wars – Post with
                                                         Gallery</a></h6>
                                                 <div class="mb-1">
-                                                    <a href="../blog/single-blog-post.html"
-                                                        class="d-block text-gray-5"><i class="ec ec-comment"></i>
+                                                    <a href="../blog/single-blog-post.html" class="d-block text-gray-5"><i
+                                                            class="ec ec-comment"></i>
                                                         3</a>
                                                 </div>
                                             </div>
@@ -1216,8 +1206,8 @@
                                                         class="font-weight-bold text-dark">Robot Wars – Post with
                                                         Gallery</a></h6>
                                                 <div class="mb-1">
-                                                    <a href="../blog/single-blog-post.html"
-                                                        class="d-block text-gray-5"><i class="ec ec-comment"></i>
+                                                    <a href="../blog/single-blog-post.html" class="d-block text-gray-5"><i
+                                                            class="ec ec-comment"></i>
                                                         3</a>
                                                 </div>
                                             </div>
@@ -1304,8 +1294,7 @@
                     <div class="mb-6">
                         <!-- Nav Classic -->
                         <div class="position-relative bg-white text-center z-index-2">
-                            <ul class="nav nav-classic nav-tab justify-content-center" id="pills-tab"
-                                role="tablist">
+                            <ul class="nav nav-classic nav-tab justify-content-center" id="pills-tab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active js-animation-link" id="pills-one-example1-tab"
                                         data-toggle="pill" href="#pills-one-example1" role="tab"
@@ -1318,10 +1307,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-animation-link" id="pills-two-example1-tab"
-                                        data-toggle="pill" href="#pills-two-example1" role="tab"
-                                        aria-controls="pills-two-example1" aria-selected="false"
-                                        data-target="#pills-two-example1" data-link-group="groups"
+                                    <a class="nav-link js-animation-link" id="pills-two-example1-tab" data-toggle="pill"
+                                        href="#pills-two-example1" role="tab" aria-controls="pills-two-example1"
+                                        aria-selected="false" data-target="#pills-two-example1" data-link-group="groups"
                                         data-animation-in="slideInUp">
                                         <div class="d-md-flex justify-content-md-center align-items-md-center">
                                             On Sale
@@ -1377,8 +1365,7 @@
                                                 </div>
                                                 <div class="product-item__footer">
                                                     <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                        <a href="../shop/compare.html"
-                                                            class="text-gray-6 font-size-13"><i
+                                                        <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                                 class="ec ec-compare mr-1 font-size-15"></i>
                                                             Compare</a>
                                                         <a href="../shop/wishlist.html"
@@ -1425,8 +1412,7 @@
                                                 </div>
                                                 <div class="product-item__footer">
                                                     <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                        <a href="../shop/compare.html"
-                                                            class="text-gray-6 font-size-13"><i
+                                                        <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                                 class="ec ec-compare mr-1 font-size-15"></i>
                                                             Compare</a>
                                                         <a href="../shop/wishlist.html"
@@ -1468,8 +1454,7 @@
                                                 </div>
                                                 <div class="product-item__footer">
                                                     <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                        <a href="../shop/compare.html"
-                                                            class="text-gray-6 font-size-13"><i
+                                                        <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                                 class="ec ec-compare mr-1 font-size-15"></i>
                                                             Compare</a>
                                                         <a href="../shop/wishlist.html"
@@ -1524,8 +1509,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li
-                                        class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
+                                    <li class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
@@ -1745,8 +1729,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li
-                                        class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
+                                    <li class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
@@ -1966,8 +1949,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li
-                                        class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
+                                    <li class="col-6 col-md-4 col-xl product-item d-xl-none d-wd-block remove-divider-wd">
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
@@ -2162,9 +2144,9 @@
                                                         class="mb-3 mb-xl-2 mb-wd-1 font-size-14 text-center mx-auto max-width-180 text-lh-18">
                                                         <a href="../shop/single-product-fullwidth.html"
                                                             class="text-blue font-weight-bold">Game Console Controller
-                                                            + USB 3.0 Cable</a></h5>
-                                                    <div
-                                                        class="d-flex align-items-center justify-content-center mb-3">
+                                                            + USB 3.0 Cable</a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-center mb-3">
                                                         <del class="font-size-18 mr-2 text-gray-2">$99,00</del>
                                                         <ins
                                                             class="font-size-xl-30 font-size-wd-25 text-red text-decoration-none">$79,00</ins>
@@ -2183,8 +2165,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
-                                                        <h6
-                                                            class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
+                                                        <h6 class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
                                                             Hurry Up! Offer ends in:</h6>
                                                         <div class="js-countdown d-flex justify-content-center"
                                                             data-end-date="2020/11/30" data-hours-format="%H"
@@ -2342,9 +2323,9 @@
                                                         class="mb-3 mb-xl-2 mb-wd-1 font-size-14 text-center mx-auto max-width-180 text-lh-18">
                                                         <a href="../shop/single-product-fullwidth.html"
                                                             class="text-blue font-weight-bold">Game Console Controller
-                                                            + USB 3.0 Cable</a></h5>
-                                                    <div
-                                                        class="d-flex align-items-center justify-content-center mb-3">
+                                                            + USB 3.0 Cable</a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-center mb-3">
                                                         <del class="font-size-18 mr-2 text-gray-2">$99,00</del>
                                                         <ins
                                                             class="font-size-xl-30 font-size-wd-25 text-red text-decoration-none">$79,00</ins>
@@ -2363,8 +2344,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
-                                                        <h6
-                                                            class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
+                                                        <h6 class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
                                                             Hurry Up! Offer ends in:</h6>
                                                         <div class="js-countdown d-flex justify-content-center"
                                                             data-end-date="2020/11/30" data-hours-format="%H"
@@ -2522,9 +2502,9 @@
                                                         class="mb-3 mb-xl-2 mb-wd-1 font-size-14 text-center mx-auto max-width-180 text-lh-18">
                                                         <a href="../shop/single-product-fullwidth.html"
                                                             class="text-blue font-weight-bold">Game Console Controller
-                                                            + USB 3.0 Cable</a></h5>
-                                                    <div
-                                                        class="d-flex align-items-center justify-content-center mb-3">
+                                                            + USB 3.0 Cable</a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-center mb-3">
                                                         <del class="font-size-18 mr-2 text-gray-2">$99,00</del>
                                                         <ins
                                                             class="font-size-xl-30 font-size-wd-25 text-red text-decoration-none">$79,00</ins>
@@ -2543,8 +2523,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
-                                                        <h6
-                                                            class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
+                                                        <h6 class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
                                                             Hurry Up! Offer ends in:</h6>
                                                         <div class="js-countdown d-flex justify-content-center"
                                                             data-end-date="2020/11/30" data-hours-format="%H"
@@ -2702,9 +2681,9 @@
                                                         class="mb-3 mb-xl-2 mb-wd-1 font-size-14 text-center mx-auto max-width-180 text-lh-18">
                                                         <a href="../shop/single-product-fullwidth.html"
                                                             class="text-blue font-weight-bold">Game Console Controller
-                                                            + USB 3.0 Cable</a></h5>
-                                                    <div
-                                                        class="d-flex align-items-center justify-content-center mb-3">
+                                                            + USB 3.0 Cable</a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-center mb-3">
                                                         <del class="font-size-18 mr-2 text-gray-2">$99,00</del>
                                                         <ins
                                                             class="font-size-xl-30 font-size-wd-25 text-red text-decoration-none">$79,00</ins>
@@ -2723,8 +2702,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
-                                                        <h6
-                                                            class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
+                                                        <h6 class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
                                                             Hurry Up! Offer ends in:</h6>
                                                         <div class="js-countdown d-flex justify-content-center"
                                                             data-end-date="2020/11/30" data-hours-format="%H"
@@ -2882,9 +2860,9 @@
                                                         class="mb-3 mb-xl-2 mb-wd-1 font-size-14 text-center mx-auto max-width-180 text-lh-18">
                                                         <a href="../shop/single-product-fullwidth.html"
                                                             class="text-blue font-weight-bold">Game Console Controller
-                                                            + USB 3.0 Cable</a></h5>
-                                                    <div
-                                                        class="d-flex align-items-center justify-content-center mb-3">
+                                                            + USB 3.0 Cable</a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-center mb-3">
                                                         <del class="font-size-18 mr-2 text-gray-2">$99,00</del>
                                                         <ins
                                                             class="font-size-xl-30 font-size-wd-25 text-red text-decoration-none">$79,00</ins>
@@ -2903,8 +2881,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
-                                                        <h6
-                                                            class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
+                                                        <h6 class="font-size-15 text-gray-2 text-center mb-xl-3 mb-wd-2">
                                                             Hurry Up! Offer ends in:</h6>
                                                         <div class="js-countdown d-flex justify-content-center"
                                                             data-end-date="2020/11/30" data-hours-format="%H"
@@ -3601,8 +3578,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li
-                                        class="col-6 col-md-4 col-wd-3 product-item d-xl-none d-wd-block remove-divider">
+                                    <li class="col-6 col-md-4 col-wd-3 product-item d-xl-none d-wd-block remove-divider">
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
@@ -3800,8 +3776,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li
-                                        class="col-6 col-md-4 col-wd-3 product-item d-xl-none d-wd-block remove-divider">
+                                    <li class="col-6 col-md-4 col-wd-3 product-item d-xl-none d-wd-block remove-divider">
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
@@ -3949,11 +3924,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -3993,11 +3966,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4037,11 +4008,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4081,11 +4050,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4125,11 +4092,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4169,11 +4134,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4213,11 +4176,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4257,11 +4218,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4301,11 +4260,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4385,11 +4342,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4429,11 +4384,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4473,11 +4426,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4517,11 +4468,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4561,11 +4510,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4605,11 +4552,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4649,11 +4594,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4693,11 +4636,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4737,11 +4678,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4821,11 +4760,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4865,11 +4802,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4909,11 +4844,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4953,11 +4886,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -4997,11 +4928,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -5041,11 +4970,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -5085,11 +5012,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -5129,11 +5054,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -5173,11 +5096,9 @@
                                             </div>
                                             <div class="product-item__footer">
                                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="../shop/compare.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                                    <a href="../shop/wishlist.html"
-                                                        class="text-gray-6 font-size-13"><i
+                                                    <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i
                                                             class="ec ec-favorites mr-1 font-size-15"></i>
                                                         Wishlist</a>
                                                 </div>
@@ -5192,68 +5113,5 @@
                 </div>
             </div>
         </div>
-        <!-- Brand Carousel -->
-        <div class="container mb-8">
-            <div class="py-2 border-top border-bottom">
-                <div class="js-slick-carousel u-slick my-1" data-slides-show="5" data-slides-scroll="1"
-                    data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-normal u-slick__arrow-centered--y"
-                    data-arrow-left-classes="fa fa-angle-left u-slick__arrow-classic-inner--left z-index-9"
-                    data-arrow-right-classes="fa fa-angle-right u-slick__arrow-classic-inner--right"
-                    data-responsive='[{
-                            "breakpoint": 992,
-                            "settings": {
-                                "slidesToShow": 2
-                            }
-                        }, {
-                            "breakpoint": 768,
-                            "settings": {
-                                "slidesToShow": 1
-                            }
-                        }, {
-                            "breakpoint": 554,
-                            "settings": {
-                                "slidesToShow": 1
-                            }
-                        }]'>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img1.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img2.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img3.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img4.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img5.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img6.png"
-                                alt="Image Description">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Brand Carousel -->
     </main>
 @endsection

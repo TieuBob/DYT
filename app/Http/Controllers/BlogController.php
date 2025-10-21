@@ -46,4 +46,27 @@ class BlogController extends Controller
 
         return view('frontend.pages.blog', $data);
     }
+
+    public function categoryPosts(Request $request, $slug = null)
+    {
+        //Find Category by slug
+        $category = Category::where('slug', $slug)->firstOrFail();
+
+        //Retrieve posts related to this category and paginate
+        $posts = Post::where('category', $category->id)->paginate(4);
+
+        $title = 'Posts in Category: ' . $category->name;
+        $description = 'Browse the latest posts in the ' . $category->name . ' category. Stay updated with articles, insights, and tutorials.';
+
+        /** Meta SEO */
+        SEOTools::setTitle($title, false);
+        SEOTools::setDescription($description);
+        SEOTools::opengraph()->setUrl(url()->current());
+
+        $data = [
+            'title' => $category->name,
+            'posts' => $posts
+        ];
+        return view('frontend.pages.category_posts', $data);
+    }
 }

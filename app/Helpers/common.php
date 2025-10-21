@@ -72,7 +72,7 @@ if (!function_exists('navigations')) {
     }
 }
 
-/** 
+/**
  * DATE FORMAT eg: October 20, 2025
  */
 if (!function_exists('date_formatter')) {

@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="/frontend/assets/vendor/animate.css/animate.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="/frontend/assets/vendor/ion-rangeslider/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/slick-carousel/slick/slick.css">
@@ -361,11 +362,19 @@
                                                 href="/" aria-haspopup="true" aria-expanded="false"
                                                 aria-labelledby="HomeSubMenu">Home</a>
                                         </li>
+                                        <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover"
+                                            data-animation-in="slideInUp" data-animation-out="fadeOut">
+                                            <a id="blogMegaMenu"
+                                                class="nav-link u-header__nav-link u-header__nav-link-toggle"
+                                                href="#" aria-haspopup="true" aria-expanded="false"
+                                                aria-labelledby="blogSubMenu">Shop</a>
+                                        </li>
                                         <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover"
                                             data-animation-in="slideInUp" data-animation-out="fadeOut">
                                             <a id="pagesMegaMenu"
                                                 class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                                href="" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                                href="{{ route('posts') }}" aria-haspopup="true"
+                                                aria-expanded="false">Blog</a>
                                             <!-- Home - Mega Menu -->
                                             <div class="hs-mega-menu w-100 u-header__sub-menu"
                                                 aria-labelledby="pagesMegaMenu">
@@ -375,21 +384,14 @@
                                             </div>
                                             <!-- End Home - Mega Menu -->
                                         </li>
-                                        <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover"
-                                            data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                            <a id="blogMegaMenu"
-                                                class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                                href="{{ route('posts') }}" aria-haspopup="true"
-                                                aria-expanded="false" aria-labelledby="blogSubMenu">Blog</a>
+                                        <li class="nav-item u-header__nav-item">
+                                            <a class="nav-link u-header__nav-link" href="#">About us</a>
                                         </li>
                                         <li class="nav-item u-header__nav-item">
-                                            <a class="nav-link u-header__nav-link" href="">About us</a>
+                                            <a class="nav-link u-header__nav-link" href="#">FAQs</a>
                                         </li>
                                         <li class="nav-item u-header__nav-item">
-                                            <a class="nav-link u-header__nav-link" href="">FAQs</a>
-                                        </li>
-                                        <li class="nav-item u-header__nav-item">
-                                            <a class="nav-link u-header__nav-link" href="">Contact Us</a>
+                                            <a class="nav-link u-header__nav-link" href="#">Contact Us</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -681,6 +683,71 @@
 
     <!-- ========== FOOTER ========== -->
     <footer>
+        <div class="container">
+            <!-- Brand Carousel -->
+            <div class="mb-6">
+                <div class="py-2 border-top border-bottom">
+                    <div class="js-slick-carousel u-slick my-1" data-slides-show="5" data-slides-scroll="1"
+                        data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-normal u-slick__arrow-centered--y"
+                        data-arrow-left-classes="fa fa-angle-left u-slick__arrow-classic-inner--left z-index-9"
+                        data-arrow-right-classes="fa fa-angle-right u-slick__arrow-classic-inner--right"
+                        data-responsive='[{
+                                "breakpoint": 992,
+                                "settings": {
+                                    "slidesToShow": 2
+                                }
+                            }, {
+                                "breakpoint": 768,
+                                "settings": {
+                                    "slidesToShow": 1
+                                }
+                            }, {
+                                "breakpoint": 554,
+                                "settings": {
+                                    "slidesToShow": 1
+                                }
+                            }]'>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img1.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img2.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img3.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img4.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img5.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                        <div class="js-slide">
+                            <a href="#" class="link-hover__brand">
+                                <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img6.png"
+                                    alt="Image Description">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Brand Carousel -->
+        </div>
         <!-- Footer-top-widget -->
         {{-- <div class="container d-none d-lg-block mb-3">
             <div class="row">
@@ -1379,8 +1446,10 @@
     <script src="/frontend/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/frontend/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="/frontend/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="/frontend/assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="/frontend/assets/vendor/typed.js/lib/typed.min.js"></script>
     <script src="/frontend/assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="/frontend/assets/vendor/appear.js"></script>
     <script src="/frontend/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
     <!-- JS Electro -->
@@ -1395,8 +1464,11 @@
     <script src="/frontend/assets/js/components/hs.fancybox.js"></script>
     <script src="/frontend/assets/js/components/hs.onscroll-animation.js"></script>
     <script src="/frontend/assets/js/components/hs.slick-carousel.js"></script>
+    <script src="/frontend/assets/js/components/hs.quantity-counter.js"></script>
+    <script src="/frontend/assets/js/components/hs.range-slider.js"></script>
     <script src="/frontend/assets/js/components/hs.show-animation.js"></script>
     <script src="/frontend/assets/js/components/hs.svg-injector.js"></script>
+    <script src="/frontend/assets/js/components/hs.scroll-nav.js"></script>
     <script src="/frontend/assets/js/components/hs.go-to.js"></script>
     <script src="/frontend/assets/js/components/hs.selectpicker.js"></script>
     @stack('scripts')
@@ -1427,6 +1499,14 @@
                 }
             });
 
+            // initialization of HSScrollNav component
+            $.HSCore.components.HSScrollNav.init($('.js-scroll-nav'), {
+                duration: 700
+            });
+
+            // initialization of quantity counter
+            $.HSCore.components.HSQantityCounter.init('.js-quantity');
+
             // initialization of popups
             $.HSCore.components.HSFancyBox.init('.js-fancybox');
 
@@ -1454,6 +1534,9 @@
                     }
                 }
             });
+
+            // initialization of forms
+            $.HSCore.components.HSRangeSlider.init('.js-range-slider');
 
             // initialization of show animations
             $.HSCore.components.HSShowAnimation.init('.js-animation-link');
