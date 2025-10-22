@@ -158,7 +158,7 @@
                             {{ isset(settings()->site_meta_description) ? settings()->site_meta_description : '' }}</p>
                     </aside>
                     <!-- sidebar categories -->
-                    <x-sidebar-categories></x-sidebar-categories>
+                    <x-sidebar-categories-posts></x-sidebar-categories-posts>
                     <!-- Recent posts -->
                     <x-sidebar-latest-posts></x-sidebar-latest-posts>
                     <!-- Sidebar tags -->

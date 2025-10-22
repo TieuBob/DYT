@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
@@ -71,6 +72,35 @@ class BlogController extends Controller
     }
 
     /** authorPosts */
+    public function authorPosts(Request $request, $username = null)
+    {
+        // Find the author based on the username
+        $author = User::where('username', $username)->firstOrFail();
+
+        // Retrieve posts related to this category and paginate
+        $posts = Post::where('author_id', $author->id)->where('visibility', 1)->orderBy('created_at', 'asc')->paginate(8);
+
+        $title = $author->name . ' - Blog Posts';
+        $description = 'Browse the latest posts by ' . $author->name . '. on various topics.';
+
+        /** set Meta SEO  tags */
+        SEOTools::setTitle($title, false);
+        SEOTools::setDescription($description);
+        SEOTools::setCanonical(route('author_posts', ['username' => $author->username]));
+        SEOTools::opengraph()->setUrl(route('author_posts', ['username' => $author->username]));
+        SEOTools::opengraph()->addProperty('type', 'profile');
+        SEOTools::opengraph()->setProfile([
+            'first_name' => $author->name,
+            'username' => $author->username
+        ]);
+
+        $data = [
+            'title' => $author->name,
+            'author' => $author,
+            'posts' => $posts
+        ];
+        return view('frontend.pages.author_posts', $data);
+    }
 
     public function tagPosts(Request $request, $tag = null)
     {
@@ -136,5 +166,50 @@ class BlogController extends Controller
             'posts' => $posts
         ];
         return view('frontend.pages.search_posts', $data);
+    }
+
+    public function readPost(Request $request, $slug = null)
+    {
+        // Fetch single post by slug
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        // Get related posts
+        $relatedPost = Post::where('category', $post->category)
+            ->where('id', '!=', $post->id)
+            ->where('visibility', 1)
+            ->take(6)
+            ->get();
+
+        // Get the next post
+        $nextPost = Post::where('id', '>', $post->id)
+            ->where('visibility', 1)
+            ->orderBy('id', 'asc')
+            ->first();
+
+        // Get the previous post
+        $prevPost = Post::where('id', '<', $post->id)
+            ->where('visibility', 1)
+            ->orderBy('id', 'desc')
+            ->first();
+
+        /** set SEO meta tags */
+        $title = $post->title;
+        $description = ($post->meta_description != '') ? $post->description : words($post->content, 35);
+
+        SEOTools::setTitle($title, false);
+        SEOTools::setDescription($description);
+        SEOTools::opengraph()->setUrl(route('read_post', ['slug' => $post->slug]));
+        SEOTools::opengraph()->addProperty('type', 'article');
+        SEOTools::opengraph()->addImage(asset('images/posts/' . $post->featured_image));
+        SEOTools::twitter()->setImage(asset('images/posts/' . $post->featured_image));
+
+        $data = [
+            'title' => $title,
+            'post' => $post,
+            'relatedPosts' => $relatedPost,
+            'nextPost' => $nextPost,
+            'prevPost' => $prevPost
+        ];
+        return view('frontend.pages.single_post', $data);
     }
 }
