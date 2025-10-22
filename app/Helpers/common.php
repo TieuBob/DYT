@@ -13,7 +13,7 @@ use illuminate\Support\Str;
 if (!function_exists('settings')) {
     function settings()
     {
-        $settings = Generalsetting::take(1)->first();
+        $settings = GeneralSetting::take(1)->first();
 
         if (!is_null($settings)) {
             return $settings;
@@ -160,3 +160,15 @@ if (!function_exists('getTags')) {
 /**
  * LISTING SIDEBAR RECENT POSTS
  */
+if (!function_exists('sidebar_latest_posts')) {
+    function sidebar_latest_posts($limit = 5, $except = null)
+    {
+        $posts = Post::limit($limit);
+        if ($except) {
+            $posts = $posts->where('id', '!=', $except);
+        }
+        return $posts->where('visibility', 1)
+            ->orderBy('created_at', 'desc')
+            ->get();
+    }
+}

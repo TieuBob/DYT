@@ -109,84 +109,13 @@
                         <div class="border-bottom border-color-1 mb-5">
                             <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">About Blog</h3>
                         </div>
-                        <p class="text-gray-90 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                            tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae
-                            neque. Quisque id sodales libero.</p>
+                        <p class="text-gray-90 mb-0">
+                            {{ isset(settings()->site_meta_description) ? settings()->site_meta_description : '' }}</p>
                     </aside>
                     <!-- sidebar categories -->
                     <x-sidebar-categories></x-sidebar-categories>
                     <!-- Recent posts -->
-                    <aside class="mb-7">
-                        <div class="border-bottom border-color-1 mb-5">
-                            <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">Recent Posts</h3>
-                        </div>
-                        <article class="mb-4">
-                            <div class="media">
-                                <div class="width-75 height-75 mr-3">
-                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img1.jpg"
-                                        alt="Image Description">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="font-size-14 mb-1"><a href="single-blog-post.html" class="text-gray-39">Robot
-                                            Wars – Post with Gallery</a></h4>
-                                    <span class="text-gray-5">March 3, 2020</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mb-4">
-                            <div class="media">
-                                <div class="width-75 height-75 mr-3">
-                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img4.jpg"
-                                        alt="Image Description">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="font-size-14 mb-1"><a href="single-blog-post.html"
-                                            class="text-gray-39">Robot Wars – Now Closed – Post with Audio</a></h4>
-                                    <span class="text-gray-5">March 3, 2020</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mb-4">
-                            <div class="media">
-                                <div class="width-75 height-75 mr-3">
-                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img5.jpg"
-                                        alt="Image Description">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="font-size-14 mb-1"><a href="single-blog-post.html"
-                                            class="text-gray-39">Robot Wars – Now Closed – Post with Video</a></h4>
-                                    <span class="text-gray-5">March 3, 2020</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mb-4">
-                            <div class="media">
-                                <div class="width-75 height-75 mr-3 position-relative">
-                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img5.jpg"
-                                        alt="Image Description">
-                                    <i class="fa fa-paragraph position-absolute-center text-white"></i>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="font-size-14 mb-1"><a href="single-blog-post.html"
-                                            class="text-gray-39">Announcement – Post without Image</a></h4>
-                                    <span class="text-gray-5">March 3, 2020</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mb-4">
-                            <div class="media">
-                                <div class="width-75 height-75 mr-3">
-                                    <img class="img-fluid object-fit-cover" src="/frontend/assets/img/1500X730/img6.jpg"
-                                        alt="Image Description">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="font-size-14 mb-1"><a href="single-blog-post.html"
-                                            class="text-gray-39">Robot Wars – Now Closed</a></h4>
-                                    <span class="text-gray-5">March 3, 2020</span>
-                                </div>
-                            </div>
-                        </article>
-                    </aside>
+                    <x-sidebar-latest-posts></x-sidebar-latest-posts>
                     <!-- Sidebar tags -->
                     <x-sidebar-tags></x-sidebar-tags>
                 </div>
