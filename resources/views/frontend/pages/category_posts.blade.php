@@ -26,22 +26,6 @@
         <!-- End breadcrumb -->
 
         <div class="container">
-            <div class="border-bottom mb-6 pb-2">
-                <ul class="nav list-unstyled justify-content-center list-divider">
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="Technology" href="#">Technology</a></li>
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="Design" href="#">Design</a></li>
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="News" href="#">News</a></li>
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="Events" href="#">Events</a></li>
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="Links &amp; Quotes" href="#">Links &amp; Quotes</a></li>
-                    <li class="nav-item flex-horizontal-center m-0"><a class="nav-link text-gray-90 underline-on-hover px-1"
-                            title="Videos" href="#">Videos</a></li>
-                </ul>
-            </div>
             <div class="row">
                 <div class="col-xl-9 col-wd">
                     <div class="min-width-1100-wd">

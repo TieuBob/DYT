@@ -20,6 +20,7 @@
                                     @if ($author->social_links->facebook_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="facebook"
                                                 href="{{ $author->social_links->facebook_url }}">
                                                 <span class="fab fa-facebook-f btn-icon__inner"></span>
                                             </a>
@@ -28,7 +29,7 @@
                                     @if ($author->email)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
-                                                href="{{ $author->email }}">
+                                                target="_blank" title="email" href="{{ $author->email }}">
                                                 <span class="fab fa-google btn-icon__inner"></span>
                                             </a>
                                         </li>
@@ -36,6 +37,7 @@
                                     @if ($author->social_links->instagram_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="instagram"
                                                 href="{{ $author->social_links->instagram_url }}">
                                                 <span class="fab fa-instagram btn-icon__inner"></span>
                                             </a>
@@ -44,6 +46,7 @@
                                     @if ($author->social_links->youtube_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="youtube"
                                                 href="{{ $author->social_links->youtube_url }}">
                                                 <span class="fab fa-youtube btn-icon__inner"></span>
                                             </a>
@@ -52,6 +55,7 @@
                                     @if ($author->social_links->twitter_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="twitter"
                                                 href="{{ $author->social_links->twitter_url }}">
                                                 <span class="fab fa-twitter btn-icon__inner"></span>
                                             </a>
@@ -60,6 +64,7 @@
                                     @if ($author->social_links->linkedin_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="linkedin"
                                                 href="{{ $author->social_links->linkedin_url }}">
                                                 <span class="fab fa-linkedin btn-icon__inner"></span>
                                             </a>
@@ -68,6 +73,7 @@
                                     @if ($author->social_links->github_url)
                                         <li class="list-inline-item mr-0">
                                             <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                target="_blank" title="github"
                                                 href="{{ $author->social_links->github_url }}">
                                                 <span class="fab fa-github btn-icon__inner"></span>
                                             </a>

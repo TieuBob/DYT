@@ -36,8 +36,49 @@
                             <div class="card-body pt-5 pb-0 px-0">
                                 <div class="d-block d-md-flex flex-center-between mb-4 mb-md-0">
                                     <h4 class="mb-md-3 mb-1">{{ $post->title }}</h4>
-                                    <a href="#" class="font-size-12 text-gray-5 ml-md-4"><i
-                                            class="far fa-comment"></i> Leave a comment</a>
+                                    <!-- author link social -->
+                                    <div class="my-4 my-md-4">
+                                        <a href="#" class="font-size-12 text-gray-5 ml-md-4">
+                                            <i class="far fa-comment"></i>
+                                            Leave a comment</a>
+                                        <ul class="list-inline mb-0 opacity-7 share-btn">
+                                            <li class="list-inline-item mr-0">
+                                                <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                    target="_blank" title="facebook"
+                                                    href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('read_post', $post->slug)) }}">
+                                                    <span class="fab fa-facebook-f btn-icon__inner"></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item mr-0">
+                                                <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                    target="_blank" title="email"
+                                                    href="mailto:?subject={{ urlencode('Check out this post: ' . $post->title) }}&amp;body={{ urlencode('I found this interesting post: ' . route('read_post', $post->slug)) }}">
+                                                    <span class="fab fa-google btn-icon__inner"></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item mr-0">
+                                                <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                    target="_blank" title="twitter"
+                                                    href="https://twitter.com/intent/tweet?url={{ urlencode(route('read_post', $post->slug)) }}&amp;text={{ urlencode($post->title) }}">
+                                                    <span class="fab fa-twitter btn-icon__inner"></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item mr-0">
+                                                <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                    target="_blank" title="linkedin"
+                                                    href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(route('read_post', $post->slug)) }}">
+                                                    <span class="fab fa-linkedin btn-icon__inner"></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item mr-0">
+                                                <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                                    target="_blank" title="pinterest"
+                                                    href="https://www.pinterest.com/pin/create/buttont?url={{ urlencode(route('read_post', $post->slug)) }}&description={{ urlencode($post->title) }}">
+                                                    <span class="fab fa-pinterest btn-icon__inner"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="mb-3 pb-3 border-bottom">
                                     <div
@@ -322,3 +363,14 @@
         </div>
     </main>
 @endsection
+@push('scripts')
+    <script>
+        $(document).on('click', '.share-btn > li > a', function(e) {
+            e.preventDefault();
+            window.open($(this).attr('href'), '', 'height=450,width=450,top=' + ($(window).height() / 2 - 275) +
+                ',left=' + ($(window).width() / 2 - 225) +
+                ',toolbar=0,location=0,menubar=0,directories=0,scrollbars=0');
+            return false;
+        });
+    </script>
+@endpush
