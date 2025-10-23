@@ -140,4 +140,12 @@ class AdminController extends Controller
         ];
         return view('backend.pages.categories_page', $data);
     }
+
+    public function manageSlider(Request $request)
+    {
+        $data = [
+            'title' => 'Manage Home Slider'
+        ];
+        return view('backend.pages.slider', $data);
+    }
 }

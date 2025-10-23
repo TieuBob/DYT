@@ -345,6 +345,13 @@
                                 <span class="mtext">General</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin.slider') }}"
+                                class="dropdown-toggle no-arrow {{ Route::is('admin.slider') ? 'active' : '' }}">
+                                <span class="micon bi bi-image"></span>
+                                <span class="mtext">Manage Slider</span>
+                            </a>
+                        </li>
                     @endif
                 </ul>
             </div>
