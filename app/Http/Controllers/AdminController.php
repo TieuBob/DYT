@@ -24,6 +24,9 @@ class AdminController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+        if (isset($request->source)) {
+            return redirect()->back();
+        }
         return redirect()->route('admin.login')->with('fail', 'You are now logged out!');
     }
 
@@ -87,15 +90,15 @@ class AdminController extends Controller
                         File::delete(public_path($path . $old_logo));
                     }
 
-                    $settings->update(['site_logo'=>$filename]);
+                    $settings->update(['site_logo' => $filename]);
 
-                    return response()->json(['status'=>1,'image_path'=>$path.$filename,'message'=>'Site logo has been updated successfully.']);
+                    return response()->json(['status' => 1, 'image_path' => $path . $filename, 'message' => 'Site logo has been updated successfully.']);
                 } else {
-                    return response()->json(['status' => 0,'Something went wrong in uploading new logo.']);
+                    return response()->json(['status' => 0, 'Something went wrong in uploading new logo.']);
                 }
             }
         } else {
-            return response()->json(['status'=>0,'message'=>'Make sure you updated general settings form first.']);
+            return response()->json(['status' => 0, 'message' => 'Make sure you updated general settings form first.']);
         }
     }
 

@@ -54,8 +54,8 @@
                                 </li>
                                 <li
                                     class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                    <a href="../shop/track-your-order.html" class="u-header-topbar__nav-link"><i
-                                            class="ec ec-transport mr-1"></i> Track Your Order</a>
+                                    <a href="#" class="u-header-topbar__nav-link">
+                                        <i class="ec ec-transport mr-1"></i> Track Your Order</a>
                                 </li>
                                 <li
                                     class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
@@ -86,6 +86,54 @@
                                     </div>
                                 </li>
                                 <li
+                                    class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
+                                    <div class="d-flex align-items-center">
+                                        <!-- user -->
+                                        @if (Auth::check())
+                                            <div class="position-relative">
+                                                <a id="userAccountDropdown"
+                                                    class="dropdown-nav-link dropdown-toggle d-flex align-items-center u-header-topbar__nav-link font-weight-normal"
+                                                    href="{{ route('admin.profile') }}" role="button"
+                                                    aria-controls="userDropdown" aria-haspopup="true"
+                                                    aria-expanded="false" data-unfold-event="hover"
+                                                    data-unfold-target="#userDropdown" data-unfold-type="css-animation"
+                                                    data-unfold-duration="300" data-unfold-delay="300"
+                                                    data-unfold-hide-on-scroll="true"
+                                                    data-unfold-animation-in="slideInUp"
+                                                    data-unfold-animation-out="fadeOut">
+                                                    <img src="{{ Auth::user()->picture }}"
+                                                        alt="{{ Auth::user()->name }}" class="rounded-circle"
+                                                        style="width: 18px; height: 18px; object-fit: cover;">
+                                                </a>
+                                                <div id="userDropdown" class="dropdown-menu dropdown-unfold"
+                                                    aria-labelledby="userAccountDropdown">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('admin.profile') }}">Profile</a>
+                                                    @if (auth()->user()->type == 'superAdmin')
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('admin.settings') }}">Settings</a>
+                                                    @endif
+                                                    <form id="frontend-logout-form"
+                                                        action="{{ route('admin.logout', ['source' => 'frontend']) }}"
+                                                        method="POST" style="display: none;">@csrf
+                                                    </form>
+                                                    <a class="dropdown-item" href="javascript:;"
+                                                        onclick="event.preventDefault();document.getElementById('frontend-logout-form').submit();">Logout</a>
+                                                </div>
+                                            </div>
+                                        @else
+                                            <a href="{{ route('admin.login') }}" role="button"
+                                                class="u-header-topbar__nav-link">
+                                                <i class="ec ec-user mr-1"></i> Register <span
+                                                    class="text-gray-50">or</span>
+                                                Sign in
+                                            </a>
+                                        @endif
+                                    </div>
+                                </li>
+                                {{-- <li
                                     class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                     <!-- Account Sidebar Toggle Button -->
                                     <a id="sidebarNavToggler" href="javascript:;" role="button"
@@ -98,7 +146,7 @@
                                         Sign in
                                     </a>
                                     <!-- End Account Sidebar Toggle Button -->
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
