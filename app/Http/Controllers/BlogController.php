@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\CMail;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
@@ -211,5 +212,52 @@ class BlogController extends Controller
             'prevPost' => $prevPost
         ];
         return view('frontend.pages.single_post', $data);
+    }
+
+    public function contactPage(Request $request)
+    {
+        $title = 'Contact Us';
+        $description = 'Hate Forms? Write Us Email';
+        SEOTools::setTitle($title, false);
+        SEOTools::setDescription($description);
+
+        return view('frontend.pages.contact');
+    }
+
+    public function sendEmail(Request $request)
+    {
+        //validate the form
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+
+        $siteInfo = settings();
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            'subject' => $request->subject,
+        ];
+
+        $mail_body = view('email-templates.contact-message-template', $data);
+
+        $mail_config = [
+            'from_address' => $request->email,
+            'from_name' => $request->name,
+            'recipient_address' => $siteInfo->site_email,
+            'recipient_name' => $siteInfo->site_title,
+            'subject' => $request->subject,
+            'body' => $mail_body,
+        ];
+
+        if (CMail::send($mail_config)) {
+            return redirect()->back()->with('success', 'Email sent successfully!.');
+        } else {
+            return redirect()->back()->withInput()->with('fail', 'Something went wrong. Try again later.');
+        }
     }
 }

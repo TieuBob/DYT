@@ -37,7 +37,7 @@
     <!-- ========== HEADER ========== -->
     <header id="header" class="u-header u-header-left-aligned-nav">
         <div class="u-header__section">
-            <!-- Topbar -->
+            <!-- Top bar -->
             <div class="u-header-topbar py-2 d-none d-xl-block">
                 <div class="container">
                     <div class="d-flex align-items-center">
@@ -49,7 +49,7 @@
                             <ul class="list-inline mb-0">
                                 <li
                                     class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                    <a href="#" class="u-header-topbar__nav-link"><i
+                                    <a href="{{ route('contact') }}" class="u-header-topbar__nav-link"><i
                                             class="ec ec-map-pointer mr-1"></i> Store Locator</a>
                                 </li>
                                 <li
@@ -252,28 +252,28 @@
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">About</a>
+                                                                            href="#">About</a>
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Contact</a>
+                                                                            href="{{ route('contact') }}">Contact</a>
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">FAQ</a>
+                                                                            href="#">FAQ</a>
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Store Directory</a>
+                                                                            href="#">Store Directory</a>
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Terms and
+                                                                            href="#">Terms and
                                                                             Conditions</a>
                                                                     </li>
                                                                     <li>
                                                                         <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">404</a>
+                                                                            href="#">404</a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -283,7 +283,7 @@
                                                         <!-- Shop Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href=""
+                                                                href="#"
                                                                 data-target="#headerSidebarPagesCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
@@ -296,7 +296,7 @@
                                                         <!-- Product Categories -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href=""
+                                                                href="#"
                                                                 data-target="#headerSidebarBlogCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
@@ -309,7 +309,7 @@
                                                         <!-- Single Product Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href=""
+                                                                href="#"
                                                                 data-target="#headerSidebarShopCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
@@ -335,23 +335,23 @@
                                                                 <ul id="headerSidebarDemosMenu"
                                                                     class="u-header-collapse__nav-list">
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Shop</a></li>
+                                                                            href="#">Shop</a></li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Cart</a></li>
+                                                                            href="#">Cart</a></li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">Checkout</a>
+                                                                            href="#">Checkout</a>
                                                                     </li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="">My
+                                                                            href="#">My
                                                                             Account</a></li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="../shop/track-your-order.html">Track
+                                                                            href="#">Track
                                                                             your Order</a></li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="../shop/compare.html">Compare</a>
+                                                                            href="#">Compare</a>
                                                                     </li>
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
-                                                                            href="../shop/wishlist.html">wishlist</a>
+                                                                            href="#">wishlist</a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -374,7 +374,7 @@
                                                         <!-- Blog Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href="javascript:;"
+                                                                href="{{ route('posts') }}"
                                                                 data-target="#headerSidebarblogsCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
@@ -394,7 +394,7 @@
                             </aside>
                             <!-- ========== END HEADER SIDEBAR ========== -->
                         </div>
-                        <!-- End Logo-offcanvas-menu -->
+                        <!-- End Logo-off canvas-menu -->
                         <!-- Primary Menu -->
                         <div class="col d-none d-xl-block">
                             <!-- Nav -->
@@ -403,12 +403,8 @@
                                 <!-- Navigation -->
                                 <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
                                     <ul class="navbar-nav u-header__navbar-nav">
-                                        <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover"
-                                            data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                            <a id="HomeMegaMenu"
-                                                class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                                href="/" aria-haspopup="true" aria-expanded="false"
-                                                aria-labelledby="HomeSubMenu">Home</a>
+                                        <li class="nav-item u-header__nav-item">
+                                            <a class="nav-link u-header__nav-link" href="/">Home</a>
                                         </li>
                                         <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover"
                                             data-animation-in="slideInUp" data-animation-out="fadeOut">
@@ -439,7 +435,8 @@
                                             <a class="nav-link u-header__nav-link" href="#">FAQs</a>
                                         </li>
                                         <li class="nav-item u-header__nav-item">
-                                            <a class="nav-link u-header__nav-link" href="#">Contact Us</a>
+                                            <a class="nav-link u-header__nav-link"
+                                                href="{{ route('contact') }}">Contact Us</a>
                                         </li>
                                     </ul>
                                 </div>
