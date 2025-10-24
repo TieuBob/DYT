@@ -6,6 +6,17 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
+/**
+ * Route::get('/cron', function () {
+ *     //Optionally secure this route with a token to prevent unauthorized access
+ *     if (request()->get('token') !== ('CRON_JOB_TOKEN')) {
+ *         abort(403, 'Unauthorized');
+ *     }
+ *     //Run the queue worker with --stop-when-empty
+ *     Artisan::call('queue:work --stop-when-empty');
+ *     return response('Queue processed successfully!');
+ * });
+ */
 
 /**
  * FRONTEND ROUTES
@@ -22,6 +33,31 @@ Route::get('/posts/tag/{any}', [BlogController::class, 'tagPosts'])->name('tag_p
 Route::get('/search', [BlogController::class, 'searchPosts'])->name('search_posts');
 Route::get('/contact', [BlogController::class, 'contactPage'])->name('contact');
 Route::post('/contact', [BlogController::class, 'sendEmail'])->name('send_email');
+
+Route::get('/login', function () {
+    return view('frontend.pages.auth.login');
+});
+Route::get('/about', function () {
+    return view('frontend.pages.about');
+});
+Route::get('/products', function () {
+    return view('frontend.pages.product.products');
+});
+Route::get('/category-products', function () {
+    return view('frontend.pages.product.category-products');
+});
+Route::get('/search-products', function () {
+    return view('frontend.pages.product.search-products');
+});
+Route::get('/single-product', function () {
+    return view('frontend.pages.product.single-product');
+});
+Route::get('/cart', function () {
+    return view('frontend.pages.e-commerce.cart');
+});
+Route::get('/checkout', function () {
+    return view('frontend.pages.e-commerce.checkout');
+});
 
 /**
  * ADMIN ROUTES

@@ -1,6 +1,5 @@
 <div>
     <form wire:submit="subscribe()" method="POST" class="js-form-message">
-        <x-form-alerts></x-form-alerts>
         <label class="sr-only" for="subscribeSrEmail">Email address</label>
         @error('email')
             <span class="text-danger ml-1">{{ $message }}</span>
