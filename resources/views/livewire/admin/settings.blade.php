@@ -11,6 +11,10 @@
                     data-toggle="tab" href="#logo_favicon" role="tab" aria-selected="false">Logo &
                     Favicon</a>
             </li>
+            <li class="nav-item">
+                <a wire:click="selectTab('social_links')" class="nav-link {{ $tab == 'social_links' ? 'active' : '' }}"
+                    data-toggle="tab" href="#social_links" role="tab" aria-selected="false">Social links</a>
+            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade {{ $tab == 'general_settings' ? 'active show' : '' }}" id="general_settings"
@@ -116,6 +120,56 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="tab-pane fade {{ $tab == 'social_links' ? 'active show' : '' }}" id="social_links"
+                role="tabpanel">
+                <div class="pd-20">
+                    <form wire:submit="updateSiteSocialLinks()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for=""><b>Facebook</b>:</label>
+                                    <input type="text" class="form-control" wire:model="facebook_url"
+                                        placeholder="Facebook URL">
+                                    @error('facebook_url')
+                                        <span class="text-danger ml-1">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for=""><b>Instagram</b>:</label>
+                                    <input type="text" class="form-control" wire:model="instagram_url"
+                                        placeholder="Instagram URL">
+                                    @error('instagram_url')
+                                        <span class="text-danger ml-1">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for=""><b>LinkedIn</b>:</label>
+                                    <input type="text" class="form-control" placeholder="LinkedIn URL"
+                                        wire:model="linkedin_url">
+                                    @error('linkedin_url')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for=""><b>Twitter (X)</b>:</label>
+                                    <input type="text" class="form-control" placeholder="Twitter URL"
+                                        wire:model="twitter_url">
+                                    @error('twitter_url')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>

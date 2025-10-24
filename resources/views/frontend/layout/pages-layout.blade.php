@@ -162,7 +162,7 @@
             <div class="py-2 py-xl-4 bg-primary-down-lg">
                 <div class="container my-0dot5 my-xl-0">
                     <div class="row align-items-center">
-                        <!-- Logo-offcanvas-menu -->
+                        <!-- Logo-off-canvas-menu-mobile -->
                         <div class="col-auto">
                             <!-- Nav -->
                             <nav
@@ -250,35 +250,23 @@
                                                                 data-parent="#headerSidebarContent">
                                                                 <ul id="headerSidebarHomeMenu"
                                                                     class="u-header-collapse__nav-list">
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="/">Home</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="#">About</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
+                                                                    <!-- Home -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="/">Home</a></li>
+                                                                    <!-- End Home -->
+                                                                    <!-- About -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">About</a></li>
+                                                                    <!-- End About -->
+                                                                    <!-- Contact -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="{{ route('contact') }}">Contact</a>
                                                                     </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="#">FAQ</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="#">Store Directory</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="#">Terms and
-                                                                            Conditions</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="u-header-collapse__submenu-nav-link"
-                                                                            href="#">404</a>
-                                                                    </li>
+                                                                    <!-- End Contact -->
+                                                                    <!-- FAQ -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">FAQ</a></li>
+                                                                    <!-- End FAQ -->
                                                                 </ul>
                                                             </div>
                                                         </li>
@@ -287,43 +275,94 @@
                                                         <!-- Shop Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href="#"
+                                                                href="javascript:;"
                                                                 data-target="#headerSidebarPagesCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
                                                                 aria-controls="headerSidebarPagesCollapse">
                                                                 Shop Pages
                                                             </a>
+
+                                                            <div id="headerSidebarPagesCollapse" class="collapse"
+                                                                data-parent="#headerSidebarContent">
+                                                                <ul id="headerSidebarPagesMenu"
+                                                                    class="u-header-collapse__nav-list">
+                                                                    <!-- Shop Grid -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Shop Grid</a>
+                                                                    </li>
+                                                                    <!-- End Shop Grid -->
+                                                                    <!-- Shop List View -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Shop
+                                                                            List View</a></li>
+                                                                    <!-- End Shop List View -->
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                         <!-- End Shop Pages -->
 
                                                         <!-- Product Categories -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href="#"
+                                                                href="javascript:;"
                                                                 data-target="#headerSidebarBlogCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
                                                                 aria-controls="headerSidebarBlogCollapse">
                                                                 Product Categories
                                                             </a>
+
+                                                            <div id="headerSidebarBlogCollapse" class="collapse"
+                                                                data-parent="#headerSidebarContent">
+                                                                <ul id="headerSidebarBlogMenu"
+                                                                    class="u-header-collapse__nav-list">
+                                                                    <!-- Column Sidebar -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">
+                                                                            Column Sidebar</a></li>
+                                                                    <!-- End Column Sidebar -->
+                                                                    <!-- Column Full width -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">
+                                                                            Column Full width</a></li>
+                                                                    <!-- End Column Full width -->
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                         <!-- End Product Categories -->
 
                                                         <!-- Single Product Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href="#"
+                                                                href="javascript:;"
                                                                 data-target="#headerSidebarShopCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
                                                                 aria-controls="headerSidebarShopCollapse">
                                                                 Single Product Pages
                                                             </a>
+
+                                                            <div id="headerSidebarShopCollapse" class="collapse"
+                                                                data-parent="#headerSidebarContent">
+                                                                <ul id="headerSidebarShopMenu"
+                                                                    class="u-header-collapse__nav-list">
+                                                                    <!-- Single Product Extended -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Single
+                                                                            Product Extended</a></li>
+                                                                    <!-- End Single Product Extended -->
+                                                                    <!-- Single Product Sidebar -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Single
+                                                                            Product Sidebar</a></li>
+                                                                    <!-- End Single Product Sidebar -->
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                         <!-- End Single Product Pages -->
 
-                                                        <!-- Ecommerce Pages -->
+                                                        <!-- E-commerce Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
                                                                 href="javascript:;"
@@ -338,29 +377,43 @@
                                                                 data-parent="#headerSidebarContent">
                                                                 <ul id="headerSidebarDemosMenu"
                                                                     class="u-header-collapse__nav-list">
+                                                                    <!-- Shop -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">Shop</a></li>
+                                                                    <!-- End Shop -->
+                                                                    <!-- Cart -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">Cart</a></li>
+                                                                    <!-- End Cart -->
+                                                                    <!-- Checkout -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">Checkout</a>
                                                                     </li>
+                                                                    <!-- End Checkout -->
+                                                                    <!-- My Account -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">My
                                                                             Account</a></li>
+                                                                    <!-- End My Account -->
+                                                                    <!-- Track your Order -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">Track
                                                                             your Order</a></li>
+                                                                    <!-- End Track your Order -->
+                                                                    <!-- Compare -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">Compare</a>
                                                                     </li>
+                                                                    <!-- End Compare -->
+                                                                    <!-- wishlist -->
                                                                     <li><a class="u-header-collapse__submenu-nav-link"
                                                                             href="#">wishlist</a>
                                                                     </li>
+                                                                    <!-- End wishlist -->
                                                                 </ul>
                                                             </div>
                                                         </li>
-                                                        <!-- End Ecommerce Pages -->
+                                                        <!-- End E-commerce Pages -->
 
                                                         <!-- Shop Columns -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
@@ -372,19 +425,53 @@
                                                                 aria-controls="headerSidebardocsCollapse">
                                                                 Shop Columns
                                                             </a>
+
+                                                            <div id="headerSidebardocsCollapse" class="collapse"
+                                                                data-parent="#headerSidebarContent">
+                                                                <ul id="headerSidebardocsMenu"
+                                                                    class="u-header-collapse__nav-list">
+                                                                    <!-- Column Full width -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">
+                                                                            Column Full width</a></li>
+                                                                    <!-- End Column Full width -->
+                                                                    <!-- Column Full width -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">
+                                                                            Column Full width</a></li>
+                                                                    <!-- End Column Full width -->
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                         <!-- End Shop Columns -->
 
                                                         <!-- Blog Pages -->
                                                         <li class="u-has-submenu u-header-collapse__submenu">
                                                             <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                href="{{ route('posts') }}"
+                                                                href="javascript:;"
                                                                 data-target="#headerSidebarblogsCollapse"
                                                                 role="button" data-toggle="collapse"
                                                                 aria-expanded="false"
                                                                 aria-controls="headerSidebarblogsCollapse">
                                                                 Blog Pages
                                                             </a>
+
+                                                            <div id="headerSidebarblogsCollapse" class="collapse"
+                                                                data-parent="#headerSidebarContent">
+                                                                <ul id="headerSidebarblogsMenu"
+                                                                    class="u-header-collapse__nav-list">
+                                                                    <!-- Blog Full Width -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Blog
+                                                                            Full Width</a></li>
+                                                                    <!-- End Blog Full Width -->
+                                                                    <!-- Single Blog Post -->
+                                                                    <li><a class="u-header-collapse__submenu-nav-link"
+                                                                            href="#">Single
+                                                                            Blog Post</a></li>
+                                                                    <!-- End Single Blog Post -->
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                         <!-- End Blog Pages -->
                                                     </ul>
@@ -398,8 +485,8 @@
                             </aside>
                             <!-- ========== END HEADER SIDEBAR ========== -->
                         </div>
-                        <!-- End Logo-off canvas-menu -->
-                        <!-- Primary Menu -->
+                        <!-- End Logo-off-canvas-menu-mobile -->
+                        <!-- Primary Menu Desktop -->
                         <div class="col d-none d-xl-block">
                             <!-- Nav -->
                             <nav
@@ -448,7 +535,7 @@
                             </nav>
                             <!-- End Nav -->
                         </div>
-                        <!-- End Primary Menu -->
+                        <!-- End Primary Menu Desktop -->
                         <!-- Customer Care -->
                         <div class="d-none d-xl-block col-md-auto">
                             <div class="d-flex">
@@ -596,7 +683,7 @@
                                                                     <div class="vmm-bg">
                                                                         <img class="img-fluid"
                                                                             src="/frontend/assets/img/500X400/img1.png"
-                                                                            alt="Image Description">
+                                                                            alt="Img Description">
                                                                     </div>
                                                                     <div class="row u-header__mega-menu-wrapper">
                                                                         <div class="col mb-3 mb-sm-0">
@@ -760,37 +847,37 @@
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img1.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img2.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img3.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img4.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img5.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                         <div class="js-slide">
                             <a href="#" class="link-hover__brand">
                                 <img class="img-fluid m-auto max-height-50" src="/frontend/assets/img/200X60/img6.png"
-                                    alt="Image Description">
+                                    alt="Img Description">
                             </a>
                         </div>
                     </div>
@@ -857,30 +944,39 @@
                         </div>
                         <div class="my-4 my-md-4">
                             <ul class="list-inline mb-0 opacity-7">
-                                <li class="list-inline-item mr-0">
-                                    <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
-                                        href="#">
-                                        <span class="fab fa-facebook-f btn-icon__inner"></span>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item mr-0">
-                                    <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
-                                        href="#">
-                                        <span class="fab fa-google btn-icon__inner"></span>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item mr-0">
-                                    <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
-                                        href="#">
-                                        <span class="fab fa-twitter btn-icon__inner"></span>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item mr-0">
-                                    <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
-                                        href="#">
-                                        <span class="fab fa-github btn-icon__inner"></span>
-                                    </a>
-                                </li>
+
+                                @if (site_social_links()->facebook_url)
+                                    <li class="list-inline-item mr-0">
+                                        <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                            href="{{ site_social_links()->facebook_url }}" target="_blank">
+                                            <span class="fab fa-facebook-f btn-icon__inner"></span>
+                                        </a>
+                                    </li>
+                                @endif
+                                @if (site_social_links()->instagram_url)
+                                    <li class="list-inline-item mr-0">
+                                        <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                            href="{{ site_social_links()->instagram_url }}" target="_blank">
+                                            <span class="fab fa-instagram btn-icon__inner"></span>
+                                        </a>
+                                    </li>
+                                @endif
+                                @if (site_social_links()->twitter_url)
+                                    <li class="list-inline-item mr-0">
+                                        <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                            href="{{ site_social_links()->twitter_url }}" target="_blank">
+                                            <span class="fab fa-twitter btn-icon__inner"></span>
+                                        </a>
+                                    </li>
+                                @endif
+                                @if (site_social_links()->linkedin_url)
+                                    <li class="list-inline-item mr-0">
+                                        <a class="btn font-size-20 btn-icon btn-soft-dark btn-bg-transparent rounded-circle"
+                                            href="{{ site_social_links()->linkedin_url }}" target="_blank">
+                                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                                        </a>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -969,7 +1065,7 @@
         <div class="bg-gray-14 py-2">
             <div class="container">
                 <div class="flex-center-between d-block d-md-flex">
-                    <div class="mb-3 mb-md-0">© <a href="#" class="font-weight-bold text-gray-90">Electro</a> -
+                    <div class="mb-3 mb-md-0">© <a href="#" class="font-weight-bold text-gray-90">DYT</a> -
                         All rights Reserved</div>
                     <div class="text-md-right">
                         <span class="d-inline-block bg-white border rounded p-1">

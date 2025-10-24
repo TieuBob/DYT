@@ -4,6 +4,7 @@ use App\Models\Category;
 use App\Models\GeneralSetting;
 use App\Models\ParentCategory;
 use App\Models\Post;
+use App\Models\SiteSocialLink;
 use App\Models\Slide;
 use Carbon\Carbon;
 use illuminate\Support\Str;
@@ -18,6 +19,19 @@ if (!function_exists('settings')) {
 
         if (!is_null($settings)) {
             return $settings;
+        }
+    }
+}
+
+/**
+ * Site Social Links
+ */
+if (!function_exists('site_social_links')) {
+    function site_social_links()
+    {
+        $links = SiteSocialLink::take(1)->first();
+        if (!is_null($links)) {
+            return $links;
         }
     }
 }
