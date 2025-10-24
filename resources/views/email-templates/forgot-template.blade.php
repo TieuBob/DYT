@@ -30,11 +30,6 @@
 </head>
 
 <body style="margin:0;padding:0;background:#f4f6f8;font-family:Helvetica,Arial,sans-serif;">
-    <!-- Preheader text: shown in inbox preview (make it short) -->
-    <div style="display:none;max-height:0px;overflow:hidden;color:#fff;line-height:1px;opacity:0;">
-        Reset your password for your account — link expires in {{ date('F j, Y, g:i A') }}.
-    </div>
-
     <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
             <td align="center" style="padding:24px 12px;">
@@ -42,7 +37,7 @@
                     style="width:600px;max-width:600px;background:#ffffff;border-radius:8px;overflow:hidden;">
                     <!-- Header -->
                     <tr>
-                        <td style="padding:20px 24px;background:#0b6cff;color:#ffffff;text-align:left;">
+                        <td style="padding:20px 24px;background:#0b6cff;color:#ffffff;text-align:center;">
                             <h1 class="h1" style="margin:0;font-size:22px;font-weight:600;">Reset your password</h1>
                         </td>
                     </tr>

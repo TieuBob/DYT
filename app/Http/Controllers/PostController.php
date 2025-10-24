@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendNewsletterJob;
 use App\Models\Category;
+use App\Models\NewsletterSubscriber;
 use App\Models\ParentCategory;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -87,6 +89,22 @@ class PostController extends Controller
                 $saved = $post->save();
 
                 if ($saved) {
+                    /**
+                     * Send Email to Newsletter Subscribers
+                     */
+                    if ($request->visibility == 1) {
+                        //Get post details
+                        $latestPost = Post::latest()->first();
+
+                        if (NewsletterSubscriber::count() > 0) {
+                            $subscribers = NewsletterSubscriber::pluck('email');
+                            foreach ($subscribers as $subscriber_email) {
+                                SendNewsletterJob::dispatch($subscriber_email, $latestPost);
+                            }
+                            $latestPost->is_notified = true;
+                            $latestPost->save();
+                        }
+                    }
                     return response()->json(['status' => 1, 'message' => 'New post has been successfully created.']);
                 } else {
                     return response()->json(['status' => 0, 'message' => 'Something went wrong.']);
@@ -180,9 +198,6 @@ class PostController extends Controller
 
                 // Optionally delete old featured images
                 if ($old_featured_image != null && File::exists(public_path($path . $old_featured_image))) {
-                    // @unlink(public_path($path . $post->featured_image));
-                    // @unlink(public_path($resized_path . 'thumb_' . $post->featured_image));
-                    // @unlink(public_path($resized_path . 'resized_' . $post->featured_image));
 
                     File::delete(public_path($path . $old_featured_image));
 
@@ -203,6 +218,8 @@ class PostController extends Controller
             }
         }
 
+        $sendEmailToSubscribers = ($post->visibility == 0 && $post->is_notified == 0 && $request->visibility == 1) ? true : false;
+
         //update post in database
         // $post->author_id = auth()->id();
         $post->category = $request->category;
@@ -218,6 +235,21 @@ class PostController extends Controller
         $saved = $post->save();
 
         if ($saved) {
+            /**
+             * Send Newsletter to Subscribers
+             */
+            if ($sendEmailToSubscribers) {
+                //Get post detail
+                $currentPost = Post::findOrFail($request->post_id);
+                if (NewsletterSubscriber::count() > 0) {
+                    $subscribers = NewsletterSubscriber::pluck('email');
+                    foreach ($subscribers as $subscriber_email) {
+                        SendNewsletterJob::dispatch($subscriber_email, $currentPost);
+                    }
+                    $currentPost->is_notified = true;
+                    $currentPost->save();
+                }
+            }
             return response()->json(['status' => 1, 'message' => 'Blog post has been successfully updated.']);
         } else {
             return response()->json(['status' => 0, 'message' => 'Something went wrong while updating a post.']);

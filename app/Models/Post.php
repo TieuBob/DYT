@@ -22,6 +22,7 @@ class Post extends Model
         'meta_keywords',
         'meta_description',
         'visibility',
+        'is_notified',
     ];
 
     public function sluggable(): array

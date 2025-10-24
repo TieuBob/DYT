@@ -29,6 +29,10 @@
 
     <!-- CSS Electro Template -->
     <link rel="stylesheet" href="/frontend/assets/css/theme.css">
+
+    <script src="/extra-assets/toastr/jquery-3.7.1.min.js"></script>
+    <script src="/extra-assets/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" href="/extra-assets/toastr/toastr.css" />
     @stack('stylesheets')
 </head>
 
@@ -812,19 +816,7 @@
                     </div>
                     <div class="col-lg-5">
                         <!-- Subscribe Form -->
-                        <form class="js-validate js-form-message">
-                            <label class="sr-only" for="subscribeSrEmail">Email address</label>
-                            <div class="input-group input-group-pill">
-                                <input type="email" class="form-control border-0 height-40" name="email"
-                                    id="subscribeSrEmail" placeholder="Email address" aria-label="Email address"
-                                    aria-describedby="subscribeButton" required
-                                    data-msg="Please enter a valid email address.">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-dark btn-sm-wide height-40 py-2"
-                                        id="subscribeButton">Sign Up</button>
-                                </div>
-                            </div>
-                        </form>
+                        @livewire('newsletter-form')
                         <!-- End Subscribe Form -->
                     </div>
                 </div>
@@ -1029,7 +1021,7 @@
                     <!-- Content -->
                     <div class="js-scrollbar u-sidebar__body">
                         <div class="u-sidebar__content u-header-sidebar__content">
-                            <form class="js-validate">
+                            {{-- <form class="js-validate">
                                 <!-- Login -->
                                 <div id="login" data-target-group="idForm">
                                     <!-- Title -->
@@ -1269,7 +1261,7 @@
                                     </div>
                                 </div>
                                 <!-- End Forgot Password -->
-                            </form>
+                            </form> --}}
                         </div>
                     </div>
                     <!-- End Content -->
@@ -1327,8 +1319,32 @@
     <script src="/frontend/assets/js/components/hs.scroll-nav.js"></script>
     <script src="/frontend/assets/js/components/hs.go-to.js"></script>
     <script src="/frontend/assets/js/components/hs.selectpicker.js"></script>
+
+    <script src="/extra-assets/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @stack('scripts')
     <!-- JS Plugins Init. -->
+    <script>
+        document.addEventListener("livewire:initialized", () => {
+            Livewire.on("showToasts", (data) => {
+                console.log("Toastr event data:", data); // debug
+
+                // Nếu Livewire gửi dạng mảng, lấy phần tử đầu tiên
+                if (Array.isArray(data)) {
+                    data = data[0];
+                }
+
+                const type = data?.type || 'info';
+                const message = data?.message || 'No message provided.';
+
+                if (typeof toastr[type] === 'function') {
+                    toastr[type](message);
+                } else {
+                    toastr.info(message);
+                }
+            });
+        });
+    </script>
     <script>
         $(window).on('load', function() {
             // initialization of HSMegaMenu component

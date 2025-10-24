@@ -120,7 +120,7 @@
                     </div>
                     <div class="mr-xl-6">
                         <address class="mb-6">
-                            Long Thọ, Nhơn Trạch, Đồng Nai<br>
+                            Long Tho, Nhon Trach, Dong Nai<br>
                         </address>
                         <h5 class="font-size-14 font-weight-bold mb-3">Hours of Operation</h5>
                         <ul class="list-unstyled mb-6">

@@ -152,7 +152,8 @@
                         <td style="background:#9ca3af; padding:18px 24px; border-bottom:1px solid #f0f0f0;">
                             <table role="presentation" width="100%">
                                 <tr>
-                                    <td style="font-size:16px; font-weight:700; color:#111827;">New Contact Form Message
+                                    <td style="font-size:16px; font-weight:700; color:#ffffff;">New
+                                        Contact Form Message
                                     </td>
                                     <td align="right" style="font-size:12px; color:#ffffff;">
                                         {{ now()->format('d/m/Y H:i') }}</td>
@@ -168,28 +169,27 @@
                                 style="border-collapse:collapse;">
                                 <tr>
                                     <td class="meta-key">Name</td>
-                                    <td>{{ $name }}</td>
+                                    <td> $name </td>
                                 </tr>
                                 <tr>
                                     <td class="meta-key">Email</td>
-                                    <td><a href="mailto:{{ $email }}"
-                                            style="color:#2563eb; text-decoration:none;">{{ $email }}</a></td>
+                                    <td><a href="mailto: $email " style="color:#2563eb; text-decoration:none;"> $email
+                                        </a></td>
                                 </tr>
                                 <tr>
                                     <td class="meta-key">Subject</td>
-                                    <td>{{ $subject }}</td>
+                                    <td> $subject </td>
                                 </tr>
                             </table>
                             <div class="divider"></div>
                             <p style="font-weight:600; margin-bottom:8px;">Message</p>
                             <div
                                 style="white-space:pre-wrap; background:#fbfdff; border:1px solid #eef6ff; padding:12px; border-radius:6px; font-size:14px; color:#1f2937;">
-                                {{ $message }}
+                                $message
                             </div>
                             <div style="height:18px;"></div>
                             <p>
-                                <a class="btn"
-                                    href="mailto:{{ $email }}?subject=Re:%20{{ $subject }}">Reply by
+                                <a class="btn" href="mailto: $email ?subject=Re:%20 $subject ">Reply by
                                     email</a>
                             </p>
                         </td>

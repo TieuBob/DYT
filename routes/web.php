@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Route;
 /**
  * FRONTEND ROUTES
  */
+Route::get('/form', function () {
+    return view('test');
+});
 Route::get('/', [BlogController::class, 'welcome'])->name('index');
 Route::get('/posts', [BlogController::class, 'index'])->name('posts');
 Route::get('/post/{slug}', [BlogController::class, 'readPost'])->name('read_post');
