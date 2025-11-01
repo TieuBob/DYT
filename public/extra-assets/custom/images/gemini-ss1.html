@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design By You - Button Colors</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 24px 0px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .product-info {
+            padding: 0px 30px;
+            font-weight: 500;
+            max-width: 568px;
+        }
+
+        .button-share {
+            padding: 0px;
+            outline: none;
+            color: rgb(17, 17, 17);
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(229, 229, 229);
+        }
+
+        .button-done {
+            outline: none;
+            color: rgb(17, 17, 17);
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(229, 229, 229);
+            width: auto;
+            padding: 0px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shoe-image {
+            max-width: 90%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Footer Styles --- */
+        .footer-wrapper {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .footer {
+            height: 230px;
+            /* Required total height */
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer.collapsed {
+            transform: translateY(calc(230px - 60px));
+        }
+
+        /* Footer Top Bar */
+        .footer-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            min-height: 60px;
+            box-sizing: border-box;
+        }
+
+        .footer-left-btn {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .footer-center-controls {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .current-part {
+            font-size: 14px;
+            color: #555;
+            white-space: nowrap;
+            margin: 0 10px;
+        }
+
+        .arrow-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow-button svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .arrow-button:disabled {
+            color: #ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .menu-button {
+            /* Styles remain unchanged */
+            background-color: #000;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer Bottom Bar (Color Options) */
+        .footer-bottom-bar {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            overflow-x: auto;
+            /* Allow horizontal scrolling for many colors */
+        }
+
+        .color-options {
+            /* REVISED: Center items when they fit, but allow scrolling for many */
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        /* Wrapper for each color button + label */
+        .color-item-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 8px;
+            /* Spacing between color options */
+            min-width: 50px;
+            /* Ensure space for label */
+        }
+
+        /* The actual color button */
+        .color-button {
+            width: 36px;
+            /* Slightly larger button */
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            padding: 0;
+            cursor: pointer;
+            box-shadow: 0 0 0 2px transparent;
+            transition: box-shadow 0.2s;
+            position: relative;
+            background-size: cover;
+        }
+
+        .color-button.selected {
+            box-shadow: 0 0 0 2px #333;
+            border-color: #333;
+        }
+
+        /* The color label below the button */
+        .color-label {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+            /* Space between button and label */
+            text-align: center;
+            white-space: nowrap;
+            max-width: 100%;
+            /* NEW: Hide by default */
+            visibility: hidden;
+            height: 0;
+            /* Collapse height when hidden */
+            overflow: hidden;
+            transition: opacity 0.2s, height 0.2s;
+        }
+
+        /* NEW: Show label when the button inside the wrapper is selected */
+        .color-item-wrapper .color-button.selected+.color-label {
+            visibility: visible;
+            height: auto;
+        }
+
+
+        /* Menu Overlay styles remain unchanged */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            z-index: 100;
+        }
+
+        .menu-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-panel {
+            /* Styles remain unchanged */
+            background-color: #fff;
+            width: 100%;
+            max-width: 900px;
+            height: 50%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 40px 20px 20px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .menu-overlay.open .menu-panel {
+            transform: translateY(0);
+        }
+
+        .menu-item {
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+            padding-left: 15px;
+            transition: color 0.1s;
+        }
+
+        .menu-item.selected {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .menu-item.selected::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-size: 20px;
+            line-height: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .d-ihr {
+            display: inherit;
+        }
+
+        .u-full-width {
+            width: 100%;
+        }
+
+        .d-sm-flx {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .flx-ai-sm-c {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .flx-ai-sm-fe {
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+        }
+
+        .flx-jc-sm-c {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .flx-jc-sm-fe {
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+
+        .flx-jc-sm-fs {
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        .flx-jc-sm-sb {
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .flx-dir-sm-c {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .flx-gro-sm-0 {
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+            flex-grow: 0;
+        }
+
+        button[class*=ncss-btn],
+        button[class*=ncss-cta] {
+            white-space: nowrap;
+            text-align: center;
+            text-decoration: none;
+            background: 0 0;
+            /* Removed font variable as it's not defined, keeping system font */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-sm-flx flx-ai-sm-c flx-jc-sm-sb header">
+            <div class="d-ihr header-left">
+                <div class="body-3 d-sm-flx flx-dir-sm-c product-info d-flx-md-flx">
+                    <span>Sample Design By You</span>
+                    <span>Price</span>
+                </div>
+            </div>
+            <div class="d-ihr header-right">
+                <button class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn button-share" aria-label="Share">
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24px" height="24px"
+                        fill="none">
+                        <path stroke="currentColor" stroke-width="1.5"
+                            d="M3.75 13v6A2.25 2.25 0 006 21.25h12A2.25 2.25 0 0020.25 19v-6"></path>
+                        <path stroke="currentColor" stroke-width="1.552" d="M12 19V4"></path>
+                        <path stroke="currentColor" stroke-width="1.5" d="M16.773 8.834l-4.772-4.773-4.774 4.773">
+                        </path>
+                    </svg>
+                </button>
+                <button class="ncss-btn button-done">Done</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <img id="shoeImage" src="images/left.png" alt="Design By You" class="shoe-image">
+        </main>
+
+        <div class="footer-wrapper">
+            <footer id="footer" class="footer">
+                <div class="footer-top-bar">
+                    <button id="toggleFooterButton" class="footer-left-btn" aria-label="Toggle footer visibility">
+                        <svg id="toggleIcon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <div class="footer-center-controls">
+                        <button id="prevComponent" class="arrow-button" aria-label="Previous component">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+
+                        <span id="currentPartDisplay" class="current-part">Tip/eyestay/tongue 6/10</span>
+
+                        <button id="nextComponent" class="arrow-button" aria-label="Next component">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="footer-right-menu">
+                        <button id="menuButton" class="menu-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Menu
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-bar">
+                    <div id="colorOptionsContainer" class="color-options">
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="menuOverlay" class="menu-overlay">
+            <div class="menu-panel">
+                <button id="closeMenuButton" class="menu-close-button" aria-label="Close menu">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="menu-title">COMPONENTS</div>
+                <div class="menu-panel-content" id="menuPanelContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const footer = document.getElementById('footer');
+        const toggleFooterButton = document.getElementById('toggleFooterButton');
+        const toggleIcon = document.getElementById('toggleIcon');
+        const menuButton = document.getElementById('menuButton');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const prevComponentButton = document.getElementById('prevComponent');
+        const nextComponentButton = document.getElementById('nextComponent');
+        const currentPartDisplay = document.getElementById('currentPartDisplay');
+        const colorOptionsContainer = document.getElementById('colorOptionsContainer');
+        const menuPanelContent = document.getElementById('menuPanelContent');
+
+        let isFooterExpanded = true;
+
+        // --- Data: Component to Color Mapping ---
+        const componentData = [{
+                name: "Vamp/Quarter",
+                colors: [{
+                    code: '#fff',
+                    label: 'White',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }, {
+                    code: '#999',
+                    label: 'Grey'
+                }]
+            },
+            {
+                name: "Foxing/Lining",
+                colors: [{
+                    code: '#ccc',
+                    label: 'Silver'
+                }, {
+                    code: '#fff',
+                    label: 'White'
+                }, {
+                    code: '#b08d57',
+                    label: 'Brown',
+                    selected: true
+                }]
+            },
+            {
+                name: "Swoosh Accent",
+                colors: [{
+                    code: '#4b6cb7',
+                    label: 'Blue',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }, {
+                    code: '#e0939d',
+                    label: 'Pink'
+                }]
+            },
+            {
+                name: "Lace/Dubrae",
+                colors: [{
+                    code: '#fff',
+                    label: 'White',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }, {
+                    code: '#6a8e52',
+                    label: 'Green'
+                }]
+            },
+            {
+                name: "Midsole",
+                colors: [{
+                    code: '#fff',
+                    label: 'White',
+                    selected: true
+                }, {
+                    code: '#f0c98f',
+                    label: 'Tan'
+                }]
+            },
+            {
+                name: "Tip/eyestay/tongue",
+                colors: [{
+                        code: '#fff',
+                        label: 'White',
+                        selected: true
+                    },
+                    {
+                        code: '#000',
+                        label: 'Black'
+                    },
+                    {
+                        code: '#999',
+                        label: 'Grey'
+                    },
+                    {
+                        code: '#f0c98f',
+                        label: 'Tan'
+                    },
+                    {
+                        code: '#b08d57',
+                        label: 'Brown'
+                    },
+                    {
+                        code: '#6a8e52',
+                        label: 'Green'
+                    },
+                    {
+                        code: '#4b6cb7',
+                        label: 'Blue'
+                    },
+                    {
+                        code: '#8c76b7',
+                        label: 'Purple'
+                    },
+                    {
+                        code: '#e0939d',
+                        label: 'Pink'
+                    }
+                ]
+            },
+            {
+                name: "Swoosh/Backtab",
+                colors: [{
+                    code: '#e0939d',
+                    label: 'Pink',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }, {
+                    code: '#fff',
+                    label: 'White'
+                }]
+            },
+            {
+                name: "Tongue Label",
+                colors: [{
+                    code: '#000',
+                    label: 'Black',
+                    selected: true
+                }, {
+                    code: '#fff',
+                    label: 'White'
+                }]
+            },
+            {
+                name: "Backtab Logo/Text",
+                colors: [{
+                    code: '#999',
+                    label: 'Grey',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }]
+            },
+            {
+                name: "Outsole",
+                colors: [{
+                    code: '#b08d57',
+                    label: 'Brown',
+                    selected: true
+                }, {
+                    code: '#000',
+                    label: 'Black'
+                }, {
+                    code: '#fff',
+                    label: 'White'
+                }]
+            }
+        ];
+
+        let currentComponentIndex = 5;
+
+        // --- Functions ---
+
+        /** Updates the Footer Top Bar (Arrows) and Bottom Bar (Colors) based on the current index. */
+        function updateComponent(newIndex) {
+            // No index checking needed here, as the listeners handle the circular math.
+            currentComponentIndex = newIndex;
+            const component = componentData[currentComponentIndex];
+            const componentName = component.name;
+
+            // 1. Update Top Bar Text. Arrows are now always enabled.
+            currentPartDisplay.textContent = `${componentName} ${currentComponentIndex + 1}/${componentData.length}`;
+            prevComponentButton.disabled = false; // Always enabled for circular navigation
+            nextComponentButton.disabled = false; // Always enabled for circular navigation
+
+            // 2. Update Color Options (Bottom Bar)
+            colorOptionsContainer.innerHTML = '';
+
+            component.colors.forEach(color => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'color-item-wrapper';
+
+                const button = document.createElement('button');
+                button.className = 'color-button';
+                button.style.backgroundColor = color.code;
+                button.dataset.color = color.label;
+
+                if (color.code.toLowerCase() === '#fff' || color.label.toLowerCase() === 'white') {
+                    button.style.border = '1px solid #ccc';
+                }
+
+                const label = document.createElement('div');
+                label.className = 'color-label';
+                label.textContent = color.label;
+
+                if (color.selected) {
+                    button.classList.add('selected');
+                }
+
+                button.addEventListener('click', function() {
+                    const currentComponent = componentData[currentComponentIndex];
+
+                    document.querySelectorAll('#colorOptionsContainer .color-button').forEach(btn => btn
+                        .classList.remove('selected'));
+                    currentComponent.colors.forEach(c => c.selected = false);
+
+                    this.classList.add('selected');
+                    color.selected = true;
+
+                    // Rebuild menu to update selection dot without closing the menu
+                    buildMenuPanel();
+                });
+
+                wrapper.appendChild(button);
+                wrapper.appendChild(label);
+                colorOptionsContainer.appendChild(wrapper);
+            });
+
+            buildMenuPanel();
+        }
+
+        /** Builds the Menu panel dynamically and attaches event listeners. */
+        function buildMenuPanel() {
+            // ... (Menu Panel building logic remains the same) ...
+            menuPanelContent.innerHTML = '';
+
+            const col1 = document.createElement('div');
+            col1.className = 'menu-column';
+            const col2 = document.createElement('div');
+            col2.className = 'menu-column';
+
+            componentData.forEach((component, index) => {
+                const item = document.createElement('div');
+                item.className = 'menu-item';
+                item.textContent = component.name;
+                item.dataset.index = index;
+
+                if (index === currentComponentIndex) {
+                    item.classList.add('selected');
+                }
+
+                item.addEventListener('click', function() {
+                    const newIndex = parseInt(this.dataset.index);
+
+                    updateComponent(newIndex);
+                    menuOverlay.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+
+                if (index < Math.ceil(componentData.length / 2)) {
+                    col1.appendChild(item);
+                } else {
+                    col2.appendChild(item);
+                }
+            });
+
+            menuPanelContent.appendChild(col1);
+            menuPanelContent.appendChild(col2);
+        }
+
+        // --- Event Listeners ---
+
+        // Toggle Footer Visibility (Logic remains the same)
+        toggleFooterButton.addEventListener('click', () => {
+            footer.classList.toggle('collapsed');
+            isFooterExpanded = !isFooterExpanded;
+
+            toggleIcon.innerHTML = isFooterExpanded ?
+                '<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>' :
+                '<path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>';
+        });
+
+        // Component Navigation Arrows - Implementing Circular Logic
+
+        // Looping Previous (1 -> 10)
+        prevComponentButton.addEventListener('click', () => {
+            const numComponents = componentData.length;
+            // Formula: (current index - 1 + total length) % total length
+            // Example: (0 - 1 + 10) % 10 = 9 (Index 9 is the last item)
+            const newIndex = (currentComponentIndex - 1 + numComponents) % numComponents;
+            updateComponent(newIndex);
+        });
+
+        // Looping Next (10 -> 1)
+        nextComponentButton.addEventListener('click', () => {
+            const numComponents = componentData.length;
+            // Formula: (current index + 1) % total length
+            // Example: (9 + 1) % 10 = 0 (Index 0 is the first item)
+            const newIndex = (currentComponentIndex + 1) % numComponents;
+            updateComponent(newIndex);
+        });
+
+
+        // Menu Overlay Open (Logic remains the same)
+        menuButton.addEventListener('click', () => {
+            buildMenuPanel();
+            menuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Menu Overlay Close (Logic remains the same)
+        document.getElementById('closeMenuButton').addEventListener('click', () => {
+            menuOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu if clicking outside the panel (Logic remains the same)
+        menuOverlay.addEventListener('click', (event) => {
+            if (event.target === menuOverlay) {
+                menuOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Initial setup
+        updateComponent(currentComponentIndex);
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

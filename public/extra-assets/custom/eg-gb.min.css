@@ -1,0 +1,104 @@
+button[class*=ncss-btn], button[class*=ncss-cta] {
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    background: 0 0;
+    /* Removed font variable as it's not defined, keeping system font */
+    cursor: pointer;
+}
+
+.d-ihr {
+    display: inherit;
+}
+
+.u-full-width {
+    width: 100%;
+}
+
+.d-sm-flx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flx-ai-sm-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flx-ai-sm-fe {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.flx-ac-sm-fs {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.flx-jc-sm-c {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flx-jc-sm-fe {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.flx-jc-sm-fs {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.flx-jc-sm-sb {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flx-wr-sm-w {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flx-dir-sm-c {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flx-gro-sm-0 {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    line-height: inherit;
+    overflow: visible;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
