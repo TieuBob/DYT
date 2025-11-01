@@ -50,11 +50,6 @@ div {
     -webkit-box-flex: 1;
     flex-grow: 1;
 }
-/* .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
 
 .header {
     display: flex;
@@ -129,11 +124,11 @@ div {
     background-color: rgb(255, 255, 255);
 }
 
-.footer.collapsed {
+/* .footer.collapsed {
     transform: translateY(calc(230px - 84px));
     transform-origin: 50% 50% 0px;
     position: fixed;
-}
+} */
 
 /* Footer Top Bar */
 .tray-header {
@@ -245,6 +240,25 @@ div {
     position: relative;
     border-radius: 100%;
     transform: translateX(-50%);
+}
+
+.framer-tray-drag-trigger {
+    width: 100%;
+    position: absolute;
+    height: 70px;
+    bottom: 160px;
+    z-index: 3;
+}
+
+.tray-trigger-drag-button {
+    top: 1px;
+    height: 24px;
+    position: relative;
+    background-color: transparent;
+}
+
+.tray-trigger-drag-button svg {
+    border-radius: 2px;
 }
 
 

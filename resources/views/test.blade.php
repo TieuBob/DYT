@@ -6,25 +6,372 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design By You - Button Colors</title>
-    <link rel="stylesheet" href="/extra-assets/custom/custom.css">
+    {{-- <link rel="stylesheet" href="/extra-assets/custom/custom.css"> --}}
     <style>
-        .arrow-button:disabled {
-            color: #ccc;
-            cursor: not-allowed;
-            pointer-events: none;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        div {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+    </style>
+    <style>
+        .id-builder-container {
+            opacity: 1;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .id-builder-container>div {
+            display: "flex";
+            opacity: "1";
+            width: "100%";
+            height: "100%";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: #fff; */
+            z-index: 10;
+        }
+
+        .modal-container {
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            display: flex;
+        }
+
+        .container {
+            position: relative;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 24px 0px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .product-info {
+            padding: 0px 30px;
+            font-weight: 500;
+            max-width: 568px;
+        }
+
+        .top-nav-right-container button:first-child {
+            margin-left: 0px;
+        }
+
+        .top-nav-right-container button {
+            margin-left: 12px;
+        }
+
+        .share-control {
+            padding: 0px;
+            outline: none;
+            color: rgb(17, 17, 17);
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(229, 229, 229);
+        }
+
+        .done-control {
+            outline: none;
+            color: rgb(17, 17, 17);
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(229, 229, 229);
+            width: auto;
+            padding: 0px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shoe-image {
+            max-width: 90%;
+            height: auto;
+            display: block;
+        }
+
+        .animate-wrapper {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* .animate-wrapper.collapsed {
+            transform: translateY(calc(230px - 84px));
+            transform-origin: 50% 50% 0px;
+            position: fixed;
+        } */
+
+        /* Footer Top Bar */
+        .tray-header {
+            position: absolute;
+        }
+
+        .customisation-tray-button {
+            padding: 0px;
+            left: 50px;
+            width: 40px;
+            height: 40px;
+            outline: none;
+            background: none;
+            position: relative;
+        }
+
+        .customisation {
+            padding: 0px;
+            width: 100vw;
+            height: 70px;
+        }
+
+        .current-part {
+            width: 100%;
+            position: relative;
+            max-width: 250px;
+        }
+
+        .part-info {
+            left: 0px;
+            width: 100%;
+            position: absolute;
+            z-index: unset !important;
+        }
+
+        .active-marketing-component-name {
+            display: flex;
+            padding: 0px 20px;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .component-name {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 28px;
+        }
+
+        .component-section {
+            color: rgb(117, 117, 117);
+            margin-left: 8px;
+        }
+
+        .mc-prev {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            z-index: 3;
+            height: 100%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            background-color: transparent;
+            -webkit-tap-highlight-color: transparent;
+            text-align: right;
+        }
+
+        .mc-next {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            z-index: 3;
+            height: 100%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            background-color: transparent;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .arrow-button {
+            top: 0px;
+            height: 28px;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            position: relative;
+        }
+
+        .arrow-button svg {
+            top: 1px;
+            position: relative;
+        }
+
+        .tray-trigger-open-button {
+            left: 50%;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+            outline: none;
+            background: none rgb(255, 255, 255);
+            position: relative;
+            border-radius: 100%;
+            transform: translateX(-50%);
+        }
+
+        /* open menu for mobile */
+        .framer-tray-drag-trigger {
+            width: 100%;
+            position: absolute;
+            height: 70px;
+            bottom: 160px;
+            z-index: 3;
+        }
+
+        .tray-trigger-drag-button {
+            top: 1px;
+            height: 24px;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .tray-trigger-drag-button svg {
+            border-radius: 2px;
         }
 
 
 
 
 
+        .tray-body {
+            width: 100%;
+            /* height: 100%; */
+            height: 150px;
+            padding-top: 80px;
+        }
 
+        .mc-active {
+            width: 100vw;
+            position: absolute;
+            height: 160px;
+        }
 
+        .color-option {
+            left: 0px;
+            width: 100%;
+            position: absolute;
+            z-index: unset !important;
 
+            flex-grow: 1;
+            display: flex;
+            /* flex-direction: column; */
+            /* justify-content: flex-start; */
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            overflow-x: auto;
+        }
 
+        .mkt-component-option-list {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .list-color {
+            position: relative;
+        }
+
+        .mkt-component-option {
+            top: 0px;
+            border: none;
+            outline: none;
+            margin: 0px 11px;
+            overflow: hidden;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+        }
+
+        .mkt-component-option.selected::before {
+            border: 1px solid rgb(229, 229, 229);
+        }
+
+        .mkt-component-option::before {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .mkt-component-option::after {
+            background-size: contain;
+            /* background-image: url(//www.nike.com/assets/nikeid/swatches/leather_black.jpg); */
+            background-color: var(--option-color);
+        }
+
+        .mkt-component-option::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgb(229, 229, 229);
+        }
+
+        .color-item-wrapper .color-button.selected+.color-label {
+            visibility: visible;
+            /* Show label when the button inside the wrapper is selected */
+            height: auto;
+        }
+
+        .mkt-component-option-name {
+            width: 120px;
+            font-size: 12px;
+            font-weight: 500;
+            position: absolute;
+            text-align: center;
+            transform: translateY(38px);
+        }
 
         /* Menu wrapper styles remain unchanged */
-        .tray-menu-wrapper {
+        .menu-animate-wrapper {
             left: 0px;
             bottom: 0px;
             width: 100%;
@@ -33,7 +380,7 @@
             background-color: rgb(255, 255, 255);
         }
 
-        .tray-menu-wrapper.open {
+        .menu-animate-wrapper.open {
             height: 504px;
             transform-origin: 50% 50% 0px;
             opacity: 1;
@@ -123,7 +470,8 @@
 
         .tray-mc-list-item-selection::before {
             background-size: contain;
-            background-image: url(/extra-assets/custom/images/10A.jpg);
+            /* background-image: url(/extra-assets/custom/images/10A.jpg); */
+            background-color: var(--option-color-selected);
         }
 
         .tray-mc-list-item-selection::before {
@@ -186,66 +534,8 @@
 
 
 
-
-
-
-
-        .menu-panel {
-            /* Styles remain unchanged */
-            background-color: rgb(255, 255, 255);
-            width: 100%;
-            height: 504px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .tray-menu-wrapper.open .menu-panel {
-            transform: translateY(0);
-        }
-
-        .tray-menu-list-item.selected {
-            font-weight: 600;
-            color: #000;
-        }
-
-        .tray-menu-list-item.selected::before {
-            background-size: contain;
-            background-image: url(/extra-assets/custom/images/90ugumrubber.jpg);
-            position: absolute;
-            left: 0;
-            color: #000;
-            font-size: 20px;
-            line-height: 1;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .color-button.selected {
-            box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(17, 17, 17);
-            /* Outline for selected */
-        }
-
-        .mkt-component-option-name {
-            width: 120px;
-            font-size: 12px;
-            font-weight: 500;
-            position: absolute;
-            text-align: center;
-            transform: translateY(38px);
-        }
-
-
-
-
-
-
-
         @media (min-width: 568px) {
-            .header {
+            .top-nav {
                 padding: 44px 20px;
             }
 
@@ -272,7 +562,7 @@
                 max-width: 30vw;
             }
 
-            .tray-trigger-menu-button {
+            .tray-trigger-open-button {
                 width: auto;
                 left: auto;
                 right: 50px;
@@ -314,6 +604,10 @@
             .mc-item-selected {
                 max-width: 275px;
             }
+
+            #framer-tray-drag-trigger {
+                display: none !important;
+            }
         }
 
         @media (min-width: 769px) {
@@ -340,23 +634,33 @@
                 justify-content: flex-start;
             }
         }
+
+        @media (max-width: 568px) {
+
+            #product-info,
+            #tray-preview-open-button,
+            #tray-trigger-open-button {
+                display: none !important;
+            }
+        }
     </style>
     <link rel="stylesheet" href="/extra-assets/custom/eg-gb.min.css">
 </head>
 
 <body>
-    <div class="cs-id-builder-container">
+    <div id="id-modal-container" class="id-builder-container">
         <div class="modal-container">
             <div class="container">
-                <header class="d-sm-flx flx-ai-sm-c flx-jc-sm-sb header">
-                    <div class="d-ihr header-left">
-                        <div class="body-3 d-sm-flx flx-dir-sm-c product-info d-flx-md-flx">
+                <div id="top-nav-wrapper" class="d-sm-flx flx-ai-sm-c flx-jc-sm-sb top-nav">
+                    <div id="top-nav-left-container" class="d-ihr">
+                        <div id="product-info" class="body-3 d-sm-flx flx-dir-sm-c product-info d-flx-md-flx">
                             <span>Sample Design By You</span>
                             <span>Price</span>
                         </div>
                     </div>
-                    <div class="d-ihr header-right">
-                        <button class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn button-share" aria-label="Share">
+                    <div id="top-nav-right-container" class="d-ihr top-nav-right-container">
+                        <button id="share-control" class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn share-control"
+                            aria-label="Share custom design">
                             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24px" height="24px"
                                 fill="none">
                                 <path stroke="currentColor" stroke-width="1.5"
@@ -367,16 +671,25 @@
                                 </path>
                             </svg>
                         </button>
-                        <button class="ncss-btn button-done">Done</button>
+                        <button id="done-control" class="ncss-btn done-control">Done</button>
                     </div>
-                </header>
+                </div>
 
                 {{-- <main class="main-content">
                     <img id="shoeImage" src="images/left.png" alt="Design By You" class="shoe-image">
                 </main> --}}
 
-                <footer id="footer" class="footer" style="height: 230px;">
-                    <div class="d-sm-flx u-full-width flx-jc-sm-sb tray-header">
+                <div id="animate-wrapper" class="animate-wrapper">
+                    <div id="framer-tray-drag-trigger"
+                        class="d-sm-flx flx-dir-sm-c flx-jc-sm-fs flx-ai-sm-c flx-gro-sm-0 framer-tray-drag-trigger"
+                        draggable="false" style="transform: none; user-select: none; touch-action: pan-x;">
+                        <button id="tray-trigger-drag-button" class="d-sm-flx flx-ai-sm-c tray-trigger-drag-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="4" version="1.1">
+                                <rect width="30" height="4" fill="#ddd" rx="2" ry="1"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="tray-header" class="d-sm-flx u-full-width flx-jc-sm-sb tray-header">
                         <button id="tray-preview-open-button" aria-label="Close customisation tray"
                             class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn customisation-tray-button">
                             <svg id="tray-preview-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"
@@ -386,7 +699,7 @@
                             </svg>
                         </button>
                         <div class="d-sm-flx flx-jc-sm-c flx-ai-sm-c customisation">
-                            <button id="mc-prev" class=" d-sm-flx flx-ai-sm-fe ncss-btn prev-customisation-button"
+                            <button id="mc-prev" class=" d-sm-flx flx-ai-sm-fe ncss-btn mc-prev"
                                 aria-label="Previous customisation">
                                 <div class="d-sm-flx flx-ai-sm-c flx-jc-sm-fe arrow-button">
                                     <svg fill="none" viewBox="0 0 24 24" width="24px" height="24px">
@@ -397,13 +710,13 @@
                             </button>
                             <div class="d-sm-flx flx-jc-sm-c flx-ai-sm-c current-part">
                                 <div class="part-info">
-                                    <div class="components">
+                                    <div id="active-marketing-component-name" class="active-marketing-component-name">
                                         <span id="componentName" class="component-name"></span>
                                         <span id="componentSection" class="component-section"></span>
                                     </div>
                                 </div>
                             </div>
-                            <button id="mc-next" class="d-sm-flx flx-ai-sm-fe ncss-btn next-customisation-button"
+                            <button id="mc-next" class="d-sm-flx flx-ai-sm-fe ncss-btn mc-next"
                                 aria-label="Next customisation">
                                 <div class="d-sm-flx flx-ai-sm-c flx-jc-sm-fs arrow-button">
                                     <svg fill="none" viewBox="0 0 24 24" width="24px" height="24px">
@@ -414,19 +727,19 @@
                             </button>
                         </div>
                         <button id="tray-trigger-open-button" aria-label="Tray trigger open button"
-                            class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn tray-trigger-menu-button">
+                            class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn tray-trigger-open-button">
                             <svg viewBox="0 0 24 24" width="24px" height="24px" fill="none">
-                                <path stroke="currentColor" stroke-width="1.5" d="M21 5.25H3M21 12H3m18 6.75H3"></path>
+                                <path stroke="currentColor" stroke-width="1.5" d="M21 5.25H3M21 12H3m18 6.75H3">
+                                </path>
                             </svg>
                             <span style="margin-left: 3px;">Menu</span>
                         </button>
                     </div>
-
-                    <div class="d-sm-flx flx-ai-sm-c flx-jc-sm-c flx-dir-sm-c tray-body">
+                    <div id="tray-body" class="d-sm-flx flx-ai-sm-c flx-jc-sm-c flx-dir-sm-c tray-body">
                         <div class="d-sm-flx flx-dir-sm-c flx-jc-sm-c mc-active">
                             <div class="d-sm-flx flx-ai-sm-c">
                                 <div class="color-option" style="opacity: 1; transform: none; z-index: 1;">
-                                    <div>
+                                    <div id="marketing-component-recursive-list">
                                         <div class="d-sm-flx flx-jc-sm-c mkt-component-option-list">
                                             <div class="list-color">
                                                 <div id="colorOptionsContainer"
@@ -439,9 +752,9 @@
                             </div>
                         </div>
                     </div>
-                </footer>
+                </div>
 
-                <div id="menu-wrapper" class="tray-menu-wrapper">
+                <div id="menu-animate-wrapper" class="menu-animate-wrapper">
                     <div class="d-sm-flx u-full-width flx-jc-sm-fe tray-menu-header">
                         <button id="tray-trigger-close-button" aria-label="Tray trigger close button"
                             class="d-sm-flx flx-ai-sm-c flx-jc-sm-c ncss-btn ncss-btn close-component-menu">
@@ -458,36 +771,6 @@
                                 <span id="mc-list-count">10</span>
                             </h1>
                             <div id="mc-list-wrapper" class="d-sm-flx flx-wr-sm-w flx-ac-sm-fs ncss-btn tray-mc-list">
-
-                                {{-- <button id="mc-list-item" aria-describedby="Tip/eyestay/tongue"
-                                    class="ncss-btn d-sm-flx flx-ai-sm-c tray-mc-list-item">
-                                    <div class="mc-item">
-                                        <div id="tray-mc-list-item-selection" class="tray-mc-list-item-selection">
-                                        </div>
-                                        <span id="tray-mc-list-item-title"
-                                            class="tray-mc-list-item-title">Tip/eyestay/tongue</span>
-                                    </div>
-                                </button>
-                                <button id="mc-list-item" aria-describedby="Outsole"
-                                    class="ncss-btn d-sm-flx flx-ai-sm-c tray-mc-list-item">
-                                    <div class="mc-item-selected">
-                                        <div id="tray-mc-list-item-selection"
-                                            class="tray-mc-list-item-selection-selected">
-                                        </div>
-                                        <span id="tray-mc-list-item-title"
-                                            class="tray-mc-list-item-title-selected">Outsole</span>
-                                    </div>
-
-
-                                    <div class="tray-mc-list-item-check" id="mc-list-item-answered">
-                                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24px"
-                                            height="24px" fill="none">
-                                            <path stroke="currentColor" stroke-width="1.5"
-                                                d="M5.03 11.69l4.753 4.754 9.186-9.188"></path>
-                                        </svg>
-                                    </div>
-                                </button> --}}
-
                             </div>
                         </div>
                     </div>
@@ -497,11 +780,11 @@
     </div>
 
     <script>
-        const footer = document.getElementById('footer');
+        const animateWrapper = document.getElementById('animate-wrapper');
         const trayPreviewOpenButton = document.getElementById('tray-preview-open-button');
         const trayPreviewIcon = document.getElementById('tray-preview-icon');
         const trayTriggerOpenButton = document.getElementById('tray-trigger-open-button');
-        const menuWrapper = document.getElementById('menu-wrapper');
+        const menuWrapper = document.getElementById('menu-animate-wrapper');
         const mcPrevButton = document.getElementById('mc-prev');
         const mcNextButton = document.getElementById('mc-next');
         const componentNameDisplay = document.getElementById('componentName');
@@ -756,8 +1039,12 @@
 
                 const mcItem = document.createElement('div');
                 mcItem.className = 'mc-item';
+
+                const selectedColor = component.colors.find(c => c.selected);
                 const liSelect = document.createElement('div');
                 liSelect.className = 'tray-mc-list-item-selection';
+                liSelect.style.setProperty('--option-color-selected', selectedColor.code);
+
                 const lisTitle = document.createElement('span');
                 lisTitle.className = 'tray-mc-list-item-title';
                 lisTitle.textContent = component.name;
@@ -771,7 +1058,6 @@
                     liSelect.classList.replace('tray-mc-list-item-selection',
                         'tray-mc-list-item-selection-selected');
 
-                    const selectedColor = component.colors.find(c => c.selected);
                     if (selectedColor) {
                         liSelect.style.setProperty('--option-color-selected', selectedColor.code);
                     }
@@ -808,7 +1094,9 @@
 
         // Toggle Footer Visibility
         trayPreviewOpenButton.addEventListener('click', () => {
-            footer.classList.toggle('collapsed'); // Toggle the visual class
+            animateWrapper.classList.toggle('collapsed'); // Toggle the visual class
+            animateWrapper.style.height = isFooterExpanded ? '84px' : '230px';
+            animateWrapper.style.transformOrigin = '50% 50% 0px';
             isFooterExpanded = !isFooterExpanded; // Flip the state
             // Update the icon
             trayPreviewIcon.innerHTML = isFooterExpanded ?
